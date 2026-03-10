@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Aria Vance Vault</title>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo"><i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE</a>
+      <button class="mobile-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-menu">
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle ">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item ">Home 1 (Default)</a>
+            <a href="index-2.html" class="dropdown-item ">Home 2 (Split)</a>
+          </div>
+        </div>
+        <a href="books.html" class="nav-link ">Books</a>
+        <a href="the-world.html" class="nav-link ">The World</a>
+        <a href="blog.html" class="nav-link ">Blog</a>
+        <a href="events.html" class="nav-link ">Events</a>
+        <a href="about.html" class="nav-link ">About</a>
+        <a href="vault.html" class="nav-link text-accent ">Vault</a>
+        <a href="contact.html" class="nav-link ">Contact</a>
+        
+        <!-- Dashboards Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle ">Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="dashboard.html" class="dropdown-item ">User Dashboard</a>
+            <a href="admin-dashboard.html" class="dropdown-item ">Admin Dashboard</a>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border-color: var(--color-border); color: var(--color-text);"><i class="fa-solid fa-circle-half-stroke"></i></button>
+          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header page-header-themed" style="min-height: calc(100vh - 80px);">
+      <div class="particles" aria-hidden="true"></div>
+      
+      <div class="container" style="max-width: 500px; position: relative; z-index: 10;" data-aos="zoom-in">
+        <div class="card" style="padding: 3rem; background-color: var(--color-surface); backdrop-filter: blur(10px); box-shadow: var(--shadow-lg); border-top: 4px solid var(--color-accent);">
+          
+          <div class="text-center mb-4">
+            <h1 style="font-size: 2.5rem; color: var(--color-primary-dark); font-family: var(--font-heading); margin-bottom: 0.5rem;">Access Auth</h1>
+            <p class="text-muted">Enter credentials to unlock the Vault.</p>
+          </div>
+          
+          <form action="dashboard.html" method="GET">
+            <div class="form-group mb-3">
+              <label for="email" class="form-label" style="font-weight: 600;">Transmission Signature (Email)</label>
+              <input type="email" id="email" class="form-control" placeholder="you@example.com" required style="padding: 0.75rem 1rem;">
+            </div>
+            
+            <div class="form-group mb-4">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <label for="password" class="form-label mb-0" style="font-weight: 600;">Cipher Code (Password)</label>
+                <a href="#" style="font-size: 0.85rem; color: var(--color-accent); font-weight: 600;">Forgot Cipher?</a>
+              </div>
+              <input type="password" id="password" class="form-control" placeholder="••••••••" required style="padding: 0.75rem 1rem;">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; border-radius: 50px; font-weight: 700;">Establish Connection</button>
+          </form>
+          
+          <div class="text-center mt-4">
+            <p class="text-muted">New citizen? <a href="register.html" style="color: var(--color-primary); font-weight: 600;">Apply for Clearance</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" data-aos="fade-up">
+          <a href="index.html" class="brand-logo">
+            <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
+          </a>
+          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic meets scientific wonder.</p>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="books.html">The Series</a></li>
+            <li><a href="the-world.html">Lore Codex</a></li>
+            <li><a href="blog.html">Transmissions</a></li>
+            <li><a href="events.html">Star-Gazing Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+          <h4>Citizen Portal</h4>
+          <ul class="footer-links">
+            <li><a href="vault.html">The Vault</a></li>
+            <li><a href="login.html">Access Account</a></li>
+            <li><a href="register.html">Join Citizenry</a></li>
+            <li><a href="about.html">The Architect</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+          <h4>Legal & Reach</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send Signal</a></li>
+            <li><a href="#">Privacy Protocol</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="text-muted">&copy; 2026 Aria Vance. All Rights Reserved. Crafted for the Cosmos.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

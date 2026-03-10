@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Aria Vance</title>
+  
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <!-- Font Awesome Icons -->`n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">`n</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo"><i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE</a>
+      <span class="badge" style="background-color: var(--color-primary-dark); color: white; padding: 0.2rem 0.6rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; margin-left: 1rem; font-weight: 700; letter-spacing: 1px;">ADMIN PORTAL</span>
+      <button class="mobile-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-menu">
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle ">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item ">Home 1 (Default)</a>
+            <a href="index-2.html" class="dropdown-item ">Home 2 (Split)</a>
+          </div>
+        </div>
+        <a href="books.html" class="nav-link ">Books</a>
+        <a href="the-world.html" class="nav-link ">The World</a>
+        <a href="blog.html" class="nav-link ">Blog</a>
+        <a href="events.html" class="nav-link ">Events</a>
+        <a href="about.html" class="nav-link ">About</a>
+        <a href="vault.html" class="nav-link text-accent ">Vault</a>
+        <a href="contact.html" class="nav-link ">Contact</a>
+        
+        <!-- Dashboards Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle active">Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="dashboard.html" class="dropdown-item ">User Dashboard</a>
+            <a href="admin-dashboard.html" class="dropdown-item active">Admin Dashboard</a>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border-color: var(--color-border); color: var(--color-text);"><i class="fa-solid fa-circle-half-stroke"></i></button>
+          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Log Out</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 120px; background-color: var(--color-bg);">
+      <div class="container">
+        
+        <div class="grid-3" style="grid-template-columns: 250px 1fr; gap: 2rem;">
+          
+          <!-- Sidebar -->
+          <aside class="dashboard-sidebar card" style="padding: 2rem; background-color: var(--color-surface); align-self: start; top: 100px; position: sticky;">
+            <div class="text-center mb-4">
+              <div class="avatar mx-auto mb-2" style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--color-primary-dark); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--color-accent);">
+                AV
+              </div>
+              <h3 style="font-size: 1.25rem;">Aria Vance</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Role: <span class="text-accent">Creator</span></p>
+            </div>
+            
+            <ul class="dashboard-nav" style="list-style: none; padding: 0;">
+              <li class="mb-2"><a href="admin-dashboard.html" class="text-primary font-bold" style="display: block; padding: 0.75rem 1rem; background-color: rgba(149, 79, 240, 0.1); color: var(--color-primary); border-radius: var(--border-radius-sm); font-weight: 600;">System Logs</a></li>
+              <li class="mb-2"><a href="#" style="display: block; padding: 0.75rem 1rem; color: var(--color-text);">Manage Users</a></li>
+              <li class="mb-2"><a href="#" style="display: block; padding: 0.75rem 1rem; color: var(--color-text);">Manage Vault items</a></li>
+              <li class="mb-2"><a href="#" style="display: block; padding: 0.75rem 1rem; color: var(--color-text);">Publish Transmissions</a></li>
+              <li><a href="login.html" class="text-danger" style="display: block; padding: 0.75rem 1rem; color: #e74c3c;">Disconnect Log</a></li>
+            </ul>
+          </aside>
+          
+          <!-- Main Content: List View -->
+          <div class="dashboard-content" data-aos="fade-left">
+            
+            <div class="mb-4">
+              <h1 class="mb-1" style="font-size: 2.25rem; color: var(--color-primary-dark);">Admin Dashboard</h1>
+              <p class="text-muted">Review platform activity, recent sign-ups, and fan communications.</p>
+            </div>
+
+            <div class="card" style="padding: 0; overflow: hidden; background-color: var(--color-surface);">
+              <!-- List Header -->
+              <div style="background-color: var(--color-primary-dark); color: white; padding: 1rem 1.5rem; display: flex; justify-content: space-between; font-weight: 600;">
+                <span style="flex: 2;">Event Description</span>
+                <span style="flex: 1;">User/Source</span>
+                <span style="flex: 1; text-align: right;">Timestamp</span>
+              </div>
+              
+              <!-- List Items -->
+              <div style="display: flex; flex-direction: column;">
+                
+                <a href="#" style="display: flex; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 1px solid var(--color-border); color: var(--color-text); transition: background-color var(--transition-fast);">
+                  <span style="flex: 2; font-weight: 500;">New User Registration <span style="color: var(--color-accent); font-size: 0.8rem; margin-left: 0.5rem;"><i class="fa-solid fa-star"></i></span></span>
+                  <span style="flex: 1; color: var(--color-text-muted);">alex.reader@example.com</span>
+                  <span style="flex: 1; text-align: right; color: var(--color-text-muted);">2 mins ago</span>
+                </a>
+                
+                <a href="#" style="display: flex; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 1px solid var(--color-border); color: var(--color-text); transition: background-color var(--transition-fast);">
+                  <span style="flex: 2; font-weight: 500;">Vault Item Accessed: Chapter 1 Preview</span>
+                  <span style="flex: 1; color: var(--color-text-muted);">fan123@galaxy.net</span>
+                  <span style="flex: 1; text-align: right; color: var(--color-text-muted);">15 mins ago</span>
+                </a>
+                
+                <a href="#" style="display: flex; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 1px solid var(--color-border); color: var(--color-text); transition: background-color var(--transition-fast);">
+                  <span style="flex: 2; font-weight: 500;">New Contact Form Submission</span>
+                  <span style="flex: 1; color: var(--color-text-muted);">Event Coordinator</span>
+                  <span style="flex: 1; text-align: right; color: var(--color-text-muted);">1 hour ago</span>
+                </a>
+                
+                <a href="#" style="display: flex; justify-content: space-between; padding: 1rem 1.5rem; color: var(--color-text); transition: background-color var(--transition-fast);">
+                  <span style="flex: 2; font-weight: 500;">Newsletter Campaign Sent</span>
+                  <span style="flex: 1; color: var(--color-text-muted);">System</span>
+                  <span style="flex: 1; text-align: right; color: var(--color-text-muted);">Yesterday</span>
+                </a>
+
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" data-aos="fade-up">
+          <a href="index.html" class="brand-logo">
+            <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
+          </a>
+          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic meets scientific wonder.</p>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="books.html">The Series</a></li>
+            <li><a href="the-world.html">Lore Codex</a></li>
+            <li><a href="blog.html">Transmissions</a></li>
+            <li><a href="events.html">Star-Gazing Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+          <h4>Citizen Portal</h4>
+          <ul class="footer-links">
+            <li><a href="vault.html">The Vault</a></li>
+            <li><a href="login.html">Access Account</a></li>
+            <li><a href="register.html">Join Citizenry</a></li>
+            <li><a href="about.html">The Architect</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+          <h4>Legal & Reach</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send Signal</a></li>
+            <li><a href="#">Privacy Protocol</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="text-muted">&copy; 2026 Aria Vance. All Rights Reserved. Crafted for the Cosmos.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      AOS.init({ duration: 800, once: true, offset: 100 });
+      
+      const listItems = document.querySelectorAll('.dashboard-content .card a');
+      listItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          item.style.backgroundColor = 'rgba(149, 79, 240, 0.05)';
+        });
+        item.addEventListener('mouseleave', () => {
+          item.style.backgroundColor = 'transparent';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+

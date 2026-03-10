@@ -1,0 +1,49 @@
+/* 
+ * RTL Layout CSS - Science Fiction / Fantasy Author Template
+ * Support for Right-To-Left Languages
+ */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .nav-actions {
+  /* reverse spacing */
+}
+
+[dir="rtl"] .site-header .brand-logo {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .section-title::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* Modals */
+[dir="rtl"] .modal-close {
+  right: auto;
+  left: 1rem;
+}
+
+/* Utilities */
+[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .mr-auto { margin-right: 0; margin-left: auto; }
+
+/* Dashboard adjustments for RTL */
+[dir="rtl"] .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--color-border);
+}
+
+[dir="rtl"] .dashboard-nav a {
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+}
+
+[dir="rtl"] .dashboard-nav a::before {
+  left: auto;
+  right: 0;
+}

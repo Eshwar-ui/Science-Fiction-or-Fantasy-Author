@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Aria Vance</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <!-- Font Awesome Icons -->`n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">`n</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Minimal Header -->
+  <header style="padding: 1.5rem 0; position: absolute; width: 100%; z-index: 100;">
+    <div class="container text-center">
+      <a href="index.html" class="brand-logo" style="justify-content: center; font-size: 2rem;">
+        <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
+      </a>
+    </div>
+  </header>
+
+  <main style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(10,17,40,0.85), rgba(45,27,78,0.85)), url('../assets/images/stars-bg.jpg') center/cover; position: relative; overflow: hidden;">
+    
+    <div class="particles"></div>
+    
+    <section class="section text-center" style="width: 100%; position: relative; z-index: 10;">
+      <div class="container">
+        <h1 class="hero-title" style="margin-bottom: 0.5rem; color: #fff;">A New Universe is Forming</h1>
+        <p class="mb-5" style="font-size: 1.25rem; color: rgba(255,255,255,0.8);">The official site of Aria Vance is undergoing a massive stellar upgrade.</p>
+        
+        <div style="background-color: var(--color-surface); padding: 3rem; border-radius: var(--border-radius-md); max-width: 600px; margin: 0 auto; box-shadow: var(--shadow-lg);">
+          <h3 class="text-primary-dark mb-2">Join the Waitlist</h3>
+          <p class="text-muted mb-4">Be the first to know when the orbital gateways open.</p>
+          
+          <form action="#" class="newsletter-form" style="display: flex; gap: 0.5rem;" onsubmit="event.preventDefault(); alert('Waitlist placeholder.');">
+            <input type="email" class="form-control" placeholder="Enter your transmission frequency" required style="flex: 1;">
+            <button type="submit" class="btn btn-primary">Notify Me</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" data-aos="fade-up">
+          <a href="index.html" class="brand-logo">
+            <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
+          </a>
+          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic meets scientific wonder.</p>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="books.html">The Series</a></li>
+            <li><a href="the-world.html">Lore Codex</a></li>
+            <li><a href="blog.html">Transmissions</a></li>
+            <li><a href="events.html">Star-Gazing Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+          <h4>Citizen Portal</h4>
+          <ul class="footer-links">
+            <li><a href="vault.html">The Vault</a></li>
+            <li><a href="login.html">Access Account</a></li>
+            <li><a href="register.html">Join Citizenry</a></li>
+            <li><a href="about.html">The Architect</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+          <h4>Legal & Reach</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send Signal</a></li>
+            <li><a href="#">Privacy Protocol</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="text-muted">&copy; 2026 Aria Vance. All Rights Reserved. Crafted for the Cosmos.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    });
+  </script>
+</body>
+</html>
+
