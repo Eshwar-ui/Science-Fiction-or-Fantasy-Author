@@ -13,6 +13,8 @@
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/contact.css">
 </head>
 <body>
 
@@ -55,86 +57,98 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header page-header-themed">
-    <div class="container text-center hero-content" data-aos="zoom-in">
-      <h1 class="hero-title" style="font-size: 3.5rem;">Communicate</h1>
-      <p class="text-muted">Send a Transmission</p>
+  <!-- Contact Hero Section -->
+  <section class="contact-hero">
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content" data-aos="fade-up">
+      <h1 class="contact-hero-title">Send a Transmission</h1>
+      <p style="font-size: 1.25rem; opacity: 0.9; font-weight: 300; max-width: 600px; margin: 0 auto;">Connect with the Architect of Galaxies. Whether it's about the lore, events, or literary inquiries, your signal is valued.</p>
     </div>
   </section>
 
   <!-- Contact Section -->
   <main>
-    <section class="section">
+    <section class="section contact-page-section">
       <div class="container">
-        <div class="grid-2" style="gap: 4rem;">
+        <div class="grid-2" style="gap: 5rem; align-items: start;">
           
-          <!-- Contact Form -->
+          <!-- Contact Form with Validation -->
           <div data-aos="fade-right">
-            <h2 class="mb-3" style="font-size: 2.5rem; color: var(--color-primary-dark);">Reach out</h2>
-            <p class="mb-4" style="font-size: 1.1rem; color: var(--color-text-muted);">Have a question about the lore? Want to invite Aria to a panel? Fill out the form below. For rights inquiries, please contact her agent directly.</p>
+            <div class="section-label mb-2" style="color: var(--color-primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Reach Out</div>
+            <h2 class="mb-4" style="font-size: 3rem; color: var(--color-primary-dark); line-height: 1;">Connect with the Author</h2>
+            <p class="mb-5" style="font-size: 1.1rem; color: var(--color-text-muted);">Have a question about the lore? Want to invite Aria to a panel? Fill out the form below. For rights inquiries, please contact her agent directly.</p>
             
-            <form action="#" method="POST" class="contact-form">
+            <form action="#" method="POST" class="contact-form" novalidate>
               <div class="grid-2" style="gap: 1.5rem; margin-bottom: 1.5rem;">
                 <div class="form-group mb-0">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" id="name" name="name" class="form-control" required>
+                  <label for="name" class="form-label" style="font-weight: 600; font-size: 0.9rem; color: var(--color-text);">Full Name</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                  <div class="invalid-feedback">Field is required</div>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="email" class="form-label">Email Address</label>
-                  <input type="email" id="email" name="email" class="form-control" required>
+                  <label for="email" class="form-label" style="font-weight: 600; font-size: 0.9rem; color: var(--color-text);">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+                  <div class="invalid-feedback">Valid email required</div>
                 </div>
               </div>
               
               <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <select id="subject" name="subject" class="form-control" required>
+                <label for="subject" class="form-label" style="font-weight: 600; font-size: 0.9rem; color: var(--color-text);">Subject</label>
+                <select id="subject" name="subject" class="form-control" required style="cursor: pointer;">
                   <option value="">Select a topic...</option>
-                  <option value="fanmail">Fan Mail</option>
-                  <option value="event">Event Invitation</option>
-                  <option value="press">Press / Interview</option>
-                  <option value="other">Other</option>
+                  <option value="fanmail">Fan Mail & Lore Questions</option>
+                  <option value="event">Event & Panel Invitations</option>
+                  <option value="press">Press & Interview Inquiries</option>
+                  <option value="other">Other Transmission</option>
                 </select>
+                <div class="invalid-feedback">Please select a subject</div>
               </div>
               
               <div class="form-group">
-                <label for="message" class="form-label">Transmission</label>
-                <textarea id="message" name="message" class="form-control" rows="6" required></textarea>
+                <label for="message" class="form-label" style="font-weight: 600; font-size: 0.9rem; color: var(--color-text);">Your Message</label>
+                <textarea id="message" name="message" class="form-control" rows="6" placeholder="Write your transmission here..." required></textarea>
+                <div class="invalid-feedback">Transmission content is missing</div>
               </div>
               
-              <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 50px; padding: 1rem; font-weight: 700;">Send Message</button>
+              <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 12px; padding: 1.25rem; font-weight: 700; font-size: 1rem; margin-top: 1rem;">Send Transmission</button>
             </form>
           </div>
 
-          <!-- Contact Info & Representation -->
+          <!-- Contact Info & Socials -->
           <div data-aos="fade-left" data-aos-delay="200">
-            <div class="card mb-4" style="background-color: var(--color-surface); padding: 2.5rem; border-top: 4px solid var(--color-accent); box-shadow: var(--shadow-md);">
-              <h3 class="mb-3" style="color: var(--color-primary-dark); font-family: var(--font-heading);">Representation</h3>
+            <!-- Representation Card -->
+            <div class="card mb-4" style="background-color: var(--color-surface); padding: 3rem; border-radius: 24px; border: 1px solid var(--color-border); box-shadow: var(--shadow-xl);">
+              <h3 class="mb-4" style="color: var(--color-primary-dark); font-family: var(--font-heading); font-size: 1.75rem;">Representation</h3>
               
-              <div class="mb-4">
-                <strong style="display: block; font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-accent); margin-bottom: 0.25rem;">Literary Agent</strong>
-                <p class="mb-0" style="font-weight: 600;">Sarah Jenkins</p>
-                <p class="text-muted" style="margin-bottom: 0.5rem;">The Cosmos Agency</p>
-                <a href="mailto:sarah@cosmosagency.com" style="color: var(--color-primary); font-weight: 600;">sarah@cosmosagency.com</a>
+              <div class="mb-5" style="border-left: 3px solid var(--color-primary); padding-left: 1.5rem;">
+                <strong style="display: block; font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Literary Agent</strong>
+                <p class="mb-0" style="font-weight: 700; font-size: 1.2rem;">Sarah Jenkins</p>
+                <p class="text-muted" style="margin-bottom: 0.75rem;">The Cosmos Agency</p>
+                <a href="mailto:sarah@cosmosagency.com" style="color: var(--color-primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-envelope" style="font-size: 0.9rem;"></i> sarah@cosmosagency.com</a>
               </div>
               
-              <div>
-                <strong style="display: block; font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-accent); margin-bottom: 0.25rem;">Film / TV Rights</strong>
-                <p class="mb-0" style="font-weight: 600;">Marcus Vance</p>
-                <p class="text-muted" style="margin-bottom: 0.5rem;">Starlight Entertainment</p>
-                <a href="mailto:marcus@starlightent.com" style="color: var(--color-primary); font-weight: 600;">marcus@starlightent.com</a>
+              <div style="border-left: 3px solid var(--color-accent); padding-left: 1.5rem;">
+                <strong style="display: block; font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Film / TV Rights</strong>
+                <p class="mb-0" style="font-weight: 700; font-size: 1.2rem;">Marcus Vance</p>
+                <p class="text-muted" style="margin-bottom: 0.75rem;">Starlight Entertainment</p>
+                <a href="mailto:marcus@starlightent.com" style="color: var(--color-primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-envelope" style="font-size: 0.9rem;"></i> marcus@starlightent.com</a>
               </div>
             </div>
 
-            <div class="card" style="background-color: var(--color-primary-dark); color: white; padding: 2.5rem; box-shadow: var(--shadow-md);">
-              <h3 class="mb-3" style="color: #fff; font-family: var(--font-heading);">Social Network</h3>
-              <p class="mb-4" style="opacity: 0.9;">Join the conversation across the galaxy.</p>
+            <!-- Total Social Media Icons -->
+            <div>
+              <h3 class="mb-2" style="color: var(--color-primary-dark); font-family: var(--font-heading);">Galactic Presence</h3>
+              <p class="text-muted">Stay updated across all established transmission channels.</p>
               
-              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="#" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #fff !important; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #fff !important; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #fff !important; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-goodreads-g"></i></a>
-                <a href="#" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #fff !important; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-discord"></i></a>
+              <div class="social-grid">
+                <a href="#" class="social-item twitter" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-item instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-item youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-item linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-item tiktok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="social-item pinterest" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="#" class="social-item discord" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="social-item facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
               </div>
             </div>
           </div>
@@ -142,7 +156,27 @@
         </div>
       </div>
     </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <h2 class="section-title">Visit the Archives</h2>
+          <p class="text-muted mt-3">Our sanctuary for lore and literary creations.</p>
+        </div>
+        <div class="map-container" data-aos="zoom-in" data-aos-delay="200">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280821873!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
   </main>
+
 
   <footer class="site-footer">
     <div class="container">
@@ -193,6 +227,7 @@
     </div>
   </footer>
   
+  <script src="../assets/js/contact-validation.js"></script>
   <script src="../assets/js/main.js"></script>
   <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
