@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="light">
+<html lang="en" dir="ltr" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aria Vance | Alternative Home</title>
-  <meta name="description" content="Official website of Aria Vance, author of The Cosmic Chronicles. Explore books, the universe, and join the Vault.">
-  
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+  <title>Aria Vance | The Architect Redefining Worlds</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;850&display=swap"
+    rel="stylesheet">
+
   <!-- CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+  <link rel="stylesheet" href="../assets/css/index-2.css">
 
-  <!-- Site Header -->
-  <header class="site-header" style="background-color: var(--color-surface); box-shadow: var(--shadow-sm);">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body id="architect-page">
+
+  <!-- Site Header (Synchronized) -->
+  <header class="site-header navbar-transparent-light">
     <div class="container navbar">
-      <a href="index-2.html" class="brand-logo" style="color: var(--color-primary);">
+      <a href="index.html" class="brand-logo">
         <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
       </a>
-      
-      <button class="mobile-toggle" aria-label="Toggle Menu" style="color: var(--color-text);"><i class="fa-solid fa-bars"></i></button>
-      
+
+      <button class="mobile-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+
       <nav class="nav-menu">
-        <!-- Home Dropdown -->
         <div class="nav-item-dropdown">
-          <a class="nav-link dropdown-toggle active">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <a class="nav-link dropdown-toggle active">Home <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
           <div class="dropdown-menu">
             <a href="index.html" class="dropdown-item">Home 1 (Default)</a>
-            <a href="index-2.html" class="dropdown-item active">Home 2 (Split)</a>
+            <a href="index-2.html" class="dropdown-item active">Home 2 (Architect)</a>
           </div>
         </div>
         <a href="books.html" class="nav-link">Books</a>
@@ -43,10 +49,10 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="vault.html" class="nav-link text-accent">Vault</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        
-        <!-- Dashboards Dropdown -->
+
         <div class="nav-item-dropdown">
-          <a class="nav-link dropdown-toggle">Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <a class="nav-link dropdown-toggle">Dashboards <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
           <div class="dropdown-menu">
             <a href="dashboard.html" class="dropdown-item">User Dashboard</a>
             <a href="admin-dashboard.html" class="dropdown-item">Admin Dashboard</a>
@@ -54,432 +60,208 @@
         </div>
 
         <div class="nav-actions">
-          <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border-color: var(--color-border); color: var(--color-text);"><i class="fa-solid fa-circle-half-stroke"></i></button>
-          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Login</a>
+          <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border-color: rgba(255,255,255,0.2);"><i
+              class="fa-solid fa-circle-half-stroke"></i></button>
+          <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; border-radius: 4px;">Access</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Split Hero Section -->
-    <section class="hero-banner" style="min-height: 100vh; display: flex; align-items: center; background: var(--color-bg); padding-top: 80px; overflow: hidden;">
+    <section class="v2-hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=2000&q=80"
+          alt="Cosmic Vision">
+      </div>
       <div class="container">
-        <div class="grid-2 align-items-center" style="gap: 4rem;">
-          <div class="hero-text-content" data-aos="fade-right" data-aos-duration="1000" style="padding: 0;">
-            <div class="badge-soft mb-3">BESTSELLING SCI-FANTASY</div>
-            <h1 class="hero-title" style="color: var(--color-primary-dark); font-size: clamp(3rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem;">
-              The <span class="text-gradient">Cosmic</span> <br>Chronicles.
-            </h1>
-            <p class="text-muted" style="font-size: 1.25rem; margin-bottom: 2.5rem; line-height: 1.8; max-width: 500px;">
-              Magic meets the stars. Embark on a journey across galaxies where ancient prophecies awaken dormant elemental powers.
+        <div data-aos="fade-up" data-aos-duration="1500" style="max-width: 700px;">
+          <span class="hero-subtitle-v2" style="color: var(--color-accent); font-weight: 700;">Aria Vance
+            Presents</span>
+          <h1 class="hero-title-v2">Defining the<br><span class="text-accent">Cosmos</span> by Design.</h1>
+          <p>Where astrophysics meets mythic architecture. Explore the structured chaos of a galaxy reborn through
+            words.</p>
+          <div class="hero-actions">
+            <a href="books.html" class="btn btn-accent">Initiate Protocol</a>
+            <a href="#dossier" class="btn btn-scroll-link">Scroll to Dossier <i class="fa-solid fa-arrow-down-long ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Structural Dossier -->
+    <section id="dossier" class="dossier-section">
+      <div class="container">
+        <div class="dossier-grid">
+          <div class="dossier-image">
+            <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1200&q=80"
+              alt="Observatory Telescope" data-aos="fade-right">
+          </div>
+          <div class="dossier-content" data-aos="fade-left" data-aos-delay="200">
+            <span class="text-accent dossier-label">File: 001_Architect</span>
+            <h2 class="dossier-title">Meticulous World-Building</h2>
+            <p class="dossier-text">Aria Vance doesn't just write; she constructs. Using actual star charts and dark
+              matter theories, the Cosmic Chronicles provide a structural integrity rarely seen in speculative fiction.
             </p>
-            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-              <a href="books.html" class="btn bg-gradient-primary" style="padding: 1rem 2rem; border-radius: 50px;">Start Reading</a>
-              <a href="the-world.html" class="btn btn-outline" style="padding: 1rem 2rem; border-radius: 50px;">Explore Map</a>
-            </div>
-          </div>
-          <div class="hero-image-visual" data-aos="fade-left" data-aos-duration="1000" style="position: relative;">
-            <div style="border-radius: 30px; overflow: hidden; box-shadow: var(--shadow-xl); border: 8px solid rgba(149, 79, 240, 0.05);">
-              <img src="https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?auto=format&fit=crop&w=1200&q=80" alt="Solar Ascendant" style="width: 100%; display: block;">
-            </div>
+            <a href="about.html" class="text-accent dossier-link">View Blueprint <i
+                class="fa-solid fa-arrow-right-long ms-2"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Awards Ribbon -->
-    <section class="awards-ribbon" style="padding: 2.5rem 0; background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); overflow: hidden;">
+    <!-- Section 3: The Chronopolis -->
+    <section class="chronopolis">
       <div class="container">
-        <div style="display: flex; justify-content: space-around; align-items: center; opacity: 0.6; filter: grayscale(1); gap: 3rem; flex-wrap: wrap;">
-          <div class="award-logo" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem;">
-            <i class="fa-solid fa-trophy"></i> NEBULA AWARD
-          </div>
-          <div class="award-logo" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem;">
-            <i class="fa-solid fa-crown"></i> HUGO NOMINEE
-          </div>
-          <div class="award-logo" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem;">
-            <i class="fa-solid fa-star"></i> LOCUS WINNER
-          </div>
-          <div class="award-logo" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem;">
-            <i class="fa-solid fa-ribbon"></i> DRAGON AWARD
-          </div>
-          <div class="award-logo" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem;">
-            <i class="fa-solid fa-medal"></i> STARBURST GOLD
+        <div class="chrono-visual" data-aos="zoom-out" data-aos-duration="2000"
+          style="background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=2000&q=80');">
+          <div class="chrono-caption" data-aos="fade-up">
+            <h3 class="chrono-title">Chronopolis Alpha</h3>
+            <p class="chrono-text">The centerpiece of the Starfall Echoes, a city where time flows as a currency and the
+              architecture breathes with the rhythm of distant novae.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Series Statistics -->
-    <section class="section" style="padding: 6rem 0; background: var(--color-bg);">
+    <!-- Section 4: Architectural Stats -->
+    <section class="architect-stats">
       <div class="container">
-        <div class="grid-3 text-center">
-          <div data-aos="fade-up">
-            <h3 style="font-size: 3.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">12+</h3>
-            <p class="text-accent" style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Star Systems</p>
-            <p class="text-muted mt-2">Fully mapped and documented lore across the galaxies.</p>
+        <div class="grid-3">
+          <div class="stat-box-modern" data-aos="fade-up">
+            <h4>12</h4>
+            <span>Star Systems Mapped</span>
+            <p>Complete with gravity calculations and orbital paths for structural realism.</p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100">
-            <h3 style="font-size: 3.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">500K</h3>
-            <p class="text-accent" style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Readers</p>
-            <p class="text-muted mt-2">A growing community of stargazers and explorers.</p>
+          <div class="stat-box-modern" data-aos="fade-up" data-aos-delay="200">
+            <h4>500K</h4>
+            <span>Enrolled Citizens</span>
+            <p>A global network of thinkers, stargazers, and readers building the lore together.</p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="200">
-            <h3 style="font-size: 3.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">24</h3>
-            <p class="text-accent" style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Alien Species</p>
-            <p class="text-muted mt-2">Divergent cultures with deep histories and unique magic.</p>
+          <div class="stat-box-modern" data-aos="fade-up" data-aos-delay="400">
+            <h4>24</h4>
+            <span>Protocols Initialized</span>
+            <p>Ongoing lore expansions and narrative modules released quarterly to the Vault.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Alternative Featured Books Section -->
-    <section class="section" style="background-color: var(--color-surface);">
+    <!-- Section 5: The Lore Mosaic -->
+    <section class="section lore-mosaic-section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="text-accent text-uppercase" style="letter-spacing: 2px; font-weight: 600;">The Series</span>
-          <h2 class="section-title">Latest & Featured Releases</h2>
+        <div class="section-header mb-5" data-aos="fade-up">
+          <h2 class="mosaic-main-title">The Lore Mosaic</h2>
+          <p class="mosaic-main-subtitle">Fragmented histories of the First Era.</p>
         </div>
-        
-        <div class="grid-2 mt-5">
-          <!-- Featured Latest Release -->
-          <div class="card" data-aos="fade-right" style="display: flex; gap: 2rem; padding: 2rem; border-color: var(--color-primary);">
-            <div style="width: 40%; flex-shrink: 0; border-radius: var(--border-radius-sm); overflow: hidden; box-shadow: var(--shadow-md);">
-              <img src="https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?auto=format&fit=crop&w=600&q=80" alt="Solar Ascendant">
-            </div>
-            <div style="display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge" style="background-color: var(--color-accent); color: var(--color-primary-dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; align-self: flex-start; margin-bottom: 1rem;">Coming Soon - Book 4</span>
-              <h3 style="font-size: 1.8rem;">Solar Ascendant</h3>
-              <p class="text-muted mb-4" style="font-size: 0.95rem;">The highly anticipated conclusion to The Cosmic Chronicles. Pre-order to receive an exclusive prologue chapter and a signed bookplate.</p>
-              <a href="book-details.html" class="btn btn-primary">Pre-Order Now</a>
+        <div class="mosaic-grid">
+          <div class="mosaic-item large" data-aos="zoom-in">
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80"
+              alt="Nebula Core">
+            <div class="mosaic-overlay">
+              <h4 class="mosaic-item-title">Crystallized Aether</h4>
+              <p class="mosaic-item-text">The primary power source for the Precursor star-engines, harvested from the
+                hearts of dying giants.</p>
             </div>
           </div>
-
-          <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 2rem;">
-            <!-- Book 1 -->
-            <div class="card" data-aos="fade-left" data-aos-delay="100" style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: center;">
-              <img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76?auto=format&fit=crop&w=200&q=80" alt="Starfall Echoes" style="width: 100px; height: 150px; object-fit: cover; border-radius: 4px; box-shadow: var(--shadow-sm);">
-              <div>
-                <p class="text-accent" style="font-weight: 600; font-size: 0.8rem; margin-bottom: 0.25rem;">Book 1</p>
-                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Starfall Echoes</h4>
-                <a href="book-details.html" class="text-primary-dark" style="font-weight: 600; font-size: 0.9rem; text-decoration: underline;">Read Details</a>
-              </div>
-            </div>
-            <!-- Book 2 -->
-            <div class="card" data-aos="fade-left" data-aos-delay="200" style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: center;">
-              <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=200&q=80" alt="Nebula's Wrath" style="width: 100px; height: 150px; object-fit: cover; border-radius: 4px; box-shadow: var(--shadow-sm);">
-              <div>
-                <p class="text-accent" style="font-weight: 600; font-size: 0.8rem; margin-bottom: 0.25rem;">Book 2</p>
-                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Nebula's Wrath</h4>
-                <a href="book-details.html" class="text-primary-dark" style="font-weight: 600; font-size: 0.9rem; text-decoration: underline;">Read Details</a>
-              </div>
+          <div class="mosaic-item" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?auto=format&fit=crop&w=800&q=80"
+              alt="Ignis Ruins">
+            <div class="mosaic-overlay">
+              <h4 class="mosaic-item-title">Ignis Ruins</h4>
             </div>
           </div>
-        </div>
-    </section>
-
-    <!-- Lore Showcase (The Universe) -->
-    <section class="section" style="padding: 8rem 0; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed; color: white;">
-      <div class="container">
-        <div class="grid-2 align-items-center">
-          <div data-aos="fade-right">
-            <span class="text-accent" style="font-weight: 700; letter-spacing: 3px; font-size: 0.9rem;">IMMERSE YOURSELF</span>
-            <h2 class="hero-title" style="color: white; font-size: 3.5rem; margin-top: 1rem;">The Fabric of the Stars</h2>
-            <p style="font-size: 1.15rem; opacity: 0.9; line-height: 1.8; margin-bottom: 2rem;">Discover the ancient technologies and primal magic that bind the Star Systems together. From the crystal plains of Ignis to the floating gardens of Zephyr, every world tells a unique story of survival and transcendence.</p>
-            <ul style="list-style: none; padding: 0;">
-              <li style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-                <i class="fa-solid fa-circle-check text-accent"></i>
-                <span>Chronicles of the First Era</span>
-              </li>
-              <li style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-                <i class="fa-solid fa-circle-check text-accent"></i>
-                <span>Intergalactic Trade & Diplomacy</span>
-              </li>
-              <li style="display: flex; gap: 1rem; align-items: center;">
-                <i class="fa-solid fa-circle-check text-accent"></i>
-                <span>The Science of Star-Jumping</span>
-              </li>
-            </ul>
-            <a href="the-world.html" class="btn btn-accent mt-5" style="border-radius: 50px;">Explore the Codex</a>
-          </div>
-          <div data-aos="fade-left" style="position: relative;">
-            <img src="https://images.unsplash.com/photo-1614728263952-84ea206f99b6?auto=format&fit=crop&w=800&q=80" alt="Cosmic Lore" style="border-radius: var(--border-radius-lg); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Alternative Author Intro Section -->
-    <section class="section" style="background-color: var(--color-bg);">
-      <div class="container text-center" data-aos="zoom-in" style="max-width: 800px; padding: 3rem; background-color: var(--color-surface); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
-        <div class="avatar mx-auto mb-4" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 4px solid var(--color-accent);">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Aria Vance" style="width: 100%; height: 100%;">
-        </div>
-        <h2 class="mb-2" style="font-size: 2.25rem;">Aria Vance</h2>
-        <p class="text-accent mb-4" style="font-weight: 600; font-size: 1.1rem; letter-spacing: 2px;">USA TODAY BESTSELLING AUTHOR</p>
-        <p class="text-muted mb-5" style="font-size: 1.1rem; line-height: 1.8;">"I write for those who look up at the night sky and wonder what kind of magic exists in the silent dark. My stories blend my background in astrophysics with a deep-seated love for mythical lore."</p>
-        <a href="about.html" class="btn btn-outline" style="border-radius: 30px;">Read Full Story</a>
-      </div>
-    </section>
-
-    <!-- Universe Blog / News -->
-    <section class="section" style="background-color: var(--color-surface);">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="text-accent" style="font-weight: 700; letter-spacing: 2px;">TRANSMISSIONS</span>
-          <h2 class="section-title">Latest from the Universe</h2>
-        </div>
-        <div class="grid-3 mt-5">
-          <div class="card" data-aos="fade-up">
-            <div class="card-img-wrapper" style="height: 200px;">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="News 1">
-            </div>
-            <div style="padding: 1.5rem;">
-              <span class="text-muted" style="font-size: 0.85rem;">March 09, 2026</span>
-              <h4 class="mt-2" style="font-size: 1.2rem; margin-bottom: 1rem;">Secrets of the Void: New Lore Origins</h4>
-              <p class="text-muted" style="font-size: 0.9rem;">Exploring the origins of the Eldritch Nebula and its impact on the upcoming Book 4...</p>
-              <a href="blog-post.html" class="text-primary mt-3 d-inline-block" style="font-weight: 600;">Read More <i class="fa-solid fa-arrow-right-long" style="font-size: 0.8rem;"></i></a>
-            </div>
-          </div>
-          <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-img-wrapper" style="height: 200px;">
-              <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80" alt="News 2">
-            </div>
-            <div style="padding: 1.5rem;">
-              <span class="text-muted" style="font-size: 0.85rem;">February 24, 2026</span>
-              <h4 class="mt-2" style="font-size: 1.2rem; margin-bottom: 1rem;">Official Map Expansion: The Outer Rim</h4>
-              <p class="text-muted" style="font-size: 0.9rem;">We've added three new planetary systems to the interactive map. Check out the details...</p>
-              <a href="blog-post.html" class="text-primary mt-3 d-inline-block" style="font-weight: 600;">Read More <i class="fa-solid fa-arrow-right-long" style="font-size: 0.8rem;"></i></a>
-            </div>
-          </div>
-          <div class="card" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-img-wrapper" style="height: 200px;">
-              <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80" alt="News 3">
-            </div>
-            <div style="padding: 1.5rem;">
-              <span class="text-muted" style="font-size: 0.85rem;">February 12, 2026</span>
-              <h4 class="mt-2" style="font-size: 1.2rem; margin-bottom: 1rem;">Character Spotlight: Elara Vance</h4>
-              <p class="text-muted" style="font-size: 0.9rem;">A deep dive into the protagonist's journey and her evolution through the first trilogy...</p>
-              <a href="blog-post.html" class="text-primary mt-3 d-inline-block" style="font-weight: 600;">Read More <i class="fa-solid fa-arrow-right-long" style="font-size: 0.8rem;"></i></a>
+          <div class="mosaic-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80"
+              alt="Space Structure">
+            <div class="mosaic-overlay">
+              <h4 class="mosaic-item-title">The Great Divide</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Citizen FAQ Section -->
-    <section class="section" style="background-color: var(--color-bg);">
-      <div class="container">
-        <div class="grid-2 align-items-center">
-          <div data-aos="fade-right">
-            <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Inquiries & Intel</h2>
-            <p class="text-muted mb-4">Navigating the complexities of the Star Systems can be daunting. Here are some of the most frequent transmission inquiries from our citizens.</p>
-            <a href="contact.html" class="btn btn-outline" style="border-radius: var(--border-radius-full);">Direct Inquiry</a>
-          </div>
-          <div data-aos="fade-left">
-            <div class="faq-item" style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--color-surface); border-radius: var(--border-radius-md); border: 1px solid var(--color-border); transition: transform 0.3s ease;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">When is the release date for Book 4?</h4>
-              <p class="text-muted" style="font-size: 0.95rem;">Solar Ascendant is currently scheduled for release in Fall 2026. Pre-orders are available now!</p>
-            </div>
-            <div class="faq-item" style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--color-surface); border-radius: var(--border-radius-md); border: 1px solid var(--color-border); transition: transform 0.3s ease;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Are the books available in digital formats?</h4>
-              <p class="text-muted" style="font-size: 0.95rem;">Yes, all titles are available in eBook (Kindle, Apple Books, Kobo) and high-quality standard formats.</p>
-            </div>
-            <div class="faq-item" style="padding: 1.5rem; background: var(--color-surface); border-radius: var(--border-radius-md); border: 1px solid var(--color-border); transition: transform 0.3s ease;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Can I join the Alpha Reader program?</h4>
-              <p class="text-muted" style="font-size: 0.95rem;">Alpha reader selection occurs annually through our newsletter. Be sure to subscribe for eligibility!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials & Reviews -->
-    <section class="section" style="background-color: var(--color-surface); padding: 8rem 0;">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="text-accent" style="font-weight: 700; letter-spacing: 2px;">CRITICAL ACCLAIM</span>
-          <h2 class="section-title">Praise for the Chronicles</h2>
-        </div>
-        <div class="grid-3 mt-5">
-          <div class="card" data-aos="fade-up" style="padding: 2.5rem; text-align: center;">
-            <div style="font-size: 2rem; color: var(--color-accent); margin-bottom: 1.5rem;"><i class="fa-solid fa-quote-left"></i></div>
-            <p style="font-style: italic; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">"Aria Vance has crafted a masterpiece that defies the boundaries of science fiction and fantasy. It's heart-stoppingly beautiful."</p>
-            <h4 style="font-weight: 700; color: var(--color-primary-dark);">The Galactic Times</h4>
-          </div>
-          <div class="card" data-aos="fade-up" data-aos-delay="100" style="padding: 2.5rem; text-align: center;">
-            <div style="font-size: 2rem; color: var(--color-accent); margin-bottom: 1.5rem;"><i class="fa-solid fa-quote-left"></i></div>
-            <p style="font-style: italic; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">"The world-building is so dense you can almost touch the crystal dust of Ignis. A triumph of the imagination."</p>
-            <h4 style="font-weight: 700; color: var(--color-primary-dark);">Literary Horizon</h4>
-          </div>
-          <div class="card" data-aos="fade-up" data-aos-delay="200" style="padding: 2.5rem; text-align: center;">
-            <div style="font-size: 2rem; color: var(--color-accent); margin-bottom: 1.5rem;"><i class="fa-solid fa-quote-left"></i></div>
-            <p style="font-style: italic; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">"Elara Vance is the protagonist we've been waiting for—vulnerable, powerful, and deeply human."</p>
-            <h4 style="font-weight: 700; color: var(--color-primary-dark);">Speculative Weekly</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Concept Art Gallery -->
-    <section class="section" style="background-color: var(--color-bg); padding: 8rem 0;">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="text-accent" style="font-weight: 700; letter-spacing: 2px;">VISIONS OF THE COSMOS</span>
-          <h2 class="section-title">Concept Art Gallery</h2>
-        </div>
-        <div class="grid-3 mt-5" style="grid-template-rows: repeat(2, 300px); gap: 1.5rem;">
-          <div class="card" data-aos="zoom-in" style="grid-column: span 2; position: relative; overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200" alt="Nebula Station" style="width: 100%; height: 100%; object-fit: cover;">
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-              <h4 style="font-size: 1.25rem;">Nebula Command Center</h4>
-              <p style="font-size: 0.9rem; opacity: 0.8;">Early interior draft for the High Council HQ.</p>
-            </div>
-          </div>
-          <div class="card" data-aos="zoom-in" data-aos-delay="100" style="position: relative; overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1614728263952-84ea206f99b6?auto=format&fit=crop&w=600" alt="Alien Flora" style="width: 100%; height: 100%; object-fit: cover;">
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-              <h4 style="font-size: 1.1rem;">Bioluminescent Flora</h4>
-            </div>
-          </div>
-          <div class="card" data-aos="zoom-in" data-aos-delay="200" style="position: relative; overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=600" alt="Starship" style="width: 100%; height: 100%; object-fit: cover;">
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-              <h4 style="font-size: 1.1rem;">The Astral Voyager</h4>
-            </div>
-          </div>
-          <div class="card" data-aos="zoom-in" data-aos-delay="300" style="grid-column: span 2; position: relative; overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1543722530-d2c32013a1e6?auto=format&fit=crop&w=1200" alt="Distant World" style="width: 100%; height: 100%; object-fit: cover;">
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-              <h4 style="font-size: 1.25rem;">Sunset on Xylos-9</h4>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5">
-          <a href="vault.html" class="btn btn-outline" style="border-radius: 50px;">Unlock Full Gallery in The Vault</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Historical Timeline (Chronology of Eras) -->
-    <section class="section" style="background-color: var(--color-surface); padding: 8rem 0;">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="text-accent" style="font-weight: 700; letter-spacing: 2px;">THE CHRONOLOGY</span>
-          <h2 class="section-title">Eras of the Star Systems</h2>
-        </div>
-        <div style="max-width: 900px; margin: 5rem auto 0; position: relative; padding-left: 2rem; border-left: 2px solid var(--color-accent);">
-          <div class="timeline-item" data-aos="fade-up" style="position: relative; margin-bottom: 4rem;">
-            <div style="position: absolute; left: -2.7rem; top: 0; width: 20px; height: 20px; background: var(--color-accent); border-radius: 50%; box-shadow: 0 0 15px var(--color-accent);"></div>
-            <h3 style="font-size: 1.5rem; color: var(--color-primary-dark); margin-bottom: 0.75rem;">The First Spark <span style="font-weight: 400; font-size: 1rem; color: var(--color-accent); margin-left: 1rem;">(2500 BCE)</span></h3>
-            <p class="text-muted" style="line-height: 1.7;">Discovery of the Primal Cores on planet Ignis, marking the birth of elemental star-jumping technology.</p>
-          </div>
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100" style="position: relative; margin-bottom: 4rem;">
-            <div style="position: absolute; left: -2.7rem; top: 0; width: 20px; height: 20px; background: var(--color-accent); border-radius: 50%;"></div>
-            <h3 style="font-size: 1.5rem; color: var(--color-primary-dark); margin-bottom: 0.75rem;">The Great Divide <span style="font-weight: 400; font-size: 1rem; color: var(--color-accent); margin-left: 1rem;">(1200 CE)</span></h3>
-            <p class="text-muted" style="line-height: 1.7;">A catastrophic resonance failure splits the High Council, leading to the formation of the Rebel Outposts.</p>
-          </div>
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200" style="position: relative; margin-bottom: 4rem;">
-            <div style="position: absolute; left: -2.7rem; top: 0; width: 20px; height: 20px; background: var(--color-accent); border-radius: 50%;"></div>
-            <h3 style="font-size: 1.5rem; color: var(--color-primary-dark); margin-bottom: 0.75rem;">The Echo Era <span style="font-weight: 400; font-size: 1rem; color: var(--color-accent); margin-left: 1rem;">(Current)</span></h3>
-            <p class="text-muted" style="line-height: 1.7;"> prophecies of the Starfall begin to manifest. Elara Vance discovers her dormant link to the Nebula.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Media Mentions (As Seen In) -->
-    <section class="section" style="background-color: var(--color-bg); padding: 5rem 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <!-- Section 6: Philosophy Spotlight -->
+    <section class="section philosophy-section">
       <div class="container text-center">
-        <p class="text-accent mb-5" style="font-weight: 700; letter-spacing: 3px; font-size: 0.85rem; text-transform: uppercase;">Recognized Globally By</p>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 4rem; opacity: 0.4; flex-wrap: wrap;">
-          <div style="font-size: 1.5rem; font-weight: 800; font-family: sans-serif; letter-spacing: -1px;">FORBES</div>
-          <div style="font-size: 1.5rem; font-weight: 700; font-family: serif; font-style: italic;">The New York Times</div>
-          <div style="font-size: 1.5rem; font-weight: 600; text-transform: uppercase;">Wired</div>
-          <div style="font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;">BBC</div>
-          <div style="font-size: 1.5rem; font-weight: 700; color: #ff0000; font-style: italic;">RollingStone</div>
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;text-align: -webkit-center;">
+          <img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76?auto=format&fit=crop&w=500&q=80"
+            alt="Aether Artifact"
+            style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 1px solid var(--color-accent); padding: 8px;">
         </div>
+        <h2 class="philosophy-label">Aether Artifact</h2>
+        <h3 class="philosophy-title">Architect of the Unknown</h3>
+        <p class="philosophy-text">"In my universe, magic is just science we haven't mapped yet. I build the machines
+          that make the impossible feel inevitable."</p>
       </div>
     </section>
 
-    <!-- Email Newsletter Signup (Compact Version) -->
-    <section class="section" style="background-color: var(--color-primary-dark); color: white;">
+    <!-- Section 7: Sub-Space CTA -->
+    <section class="sub-space-portal">
       <div class="container" data-aos="fade-up">
-        <div class="grid-2 align-items-center" style="align-items: center;">
-          <div>
-            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Join the Inner Circle</h2>
-            <p style="opacity: 0.8; font-size: 1.1rem;">Get exclusive content and early access to cover reveals.</p>
-          </div>
-          <div>
-            <form action="#" method="POST" style="display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.5rem; border-radius: var(--border-radius-full);">
-              <input type="email" placeholder="Email address" required style="flex: 1; min-width: 250px; background: transparent; border: none; color: white; padding-left: 1rem; outline: none; font-family: var(--font-body);">
-              <button type="submit" class="btn btn-accent" style="border-radius: var(--border-radius-full); padding: 0.75rem 2rem;">Subscribe</button>
-            </form>
+        <div class="portal-outline">
+          <h2 class="portal-title">Access the Vault</h2>
+          <p class="portal-text">Join the citizenry to receive encrypted transmissions and early world blueprints.</p>
+          <div class="portal-actions">
+            <a href="register.html" class="btn btn-accent">Enroll</a>
+            <a href="vault.html" class="btn btn-portal-guide">Protocol Guide</a>
           </div>
         </div>
       </div>
     </section>
   </main>
-  
-  <footer class="site-footer">
+
+  <!-- Section 8: Global Footer (Synchronized) -->
+  <footer class="site-footer architect-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand" data-aos="fade-up">
           <a href="index.html" class="brand-logo">
             <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
           </a>
-          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic meets scientific wonder.</p>
+          <p>Constructing narrative galaxies with scientific precision. Join the odyssey across the mapped Star Systems.
+          </p>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
-          <h4>Explore</h4>
+          <h4>Structural Links</h4>
           <ul class="footer-links">
             <li><a href="books.html">The Series</a></li>
             <li><a href="the-world.html">Lore Codex</a></li>
-            <li><a href="blog.html">Transmissions</a></li>
-            <li><a href="events.html">Star-Gazing Events</a></li>
+            <li><a href="about.html">The Architect</a></li>
+            <li><a href="contact.html">Communicate</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
-          <h4>Citizen Portal</h4>
+          <h4>Citizen Access</h4>
           <ul class="footer-links">
             <li><a href="vault.html">The Vault</a></li>
-            <li><a href="login.html">Access Account</a></li>
-            <li><a href="register.html">Join Citizenry</a></li>
-            <li><a href="about.html">The Architect</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
           </ul>
         </div>
-        <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
-          <h4>Legal & Reach</h4>
-          <ul class="footer-links">
-            <li><a href="contact.html">Send Signal</a></li>
-            <li><a href="#">Privacy Protocol</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Press Kit</a></li>
-          </ul>
+        <div class="footer-socials" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="text-muted">&copy; 2026 Aria Vance. All Rights Reserved. Crafted for the Cosmos.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
+        <p style="opacity: 0.5; font-size: 0.8rem; color: #000;">&copy; 2026 Aria Vance. All Rights Reserved.
+          Structural Integrity
+          Guaranteed.</p>
       </div>
     </div>
   </footer>
-  
-  <!-- Scripts -->
+
   <script src="../assets/js/main.js"></script>
-  <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      AOS.init({ duration: 800, once: true, offset: 100 });
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-out-cubic' });
     });
-  </script> 
-</body> 
-</html>
+  </script>
+</body>
 
+</html>
