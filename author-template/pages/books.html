@@ -5,304 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Archive of Worlds | Aria Vance</title>
-  
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/dashboard.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Outfit', sans-serif;
-    }
-
-    /* Cinematic Parallax Hero */
-    .parallax-hero {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .nebula-layer {
-      position: absolute;
-      width: 120%;
-      height: 120%;
-      top: -10%;
-      left: -10%;
-      background: radial-gradient(circle at 50% 50%, rgba(var(--color-primary-rgb), 0.2), transparent 70%);
-      filter: blur(80px);
-      z-index: 1;
-    }
-
-    .hero-content-cinema {
-      position: relative;
-      z-index: 10;
-      text-align: center;
-    }
-
-    /* Universal Navigator Dots */
-    .uni-nav {
-      position: fixed;
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      z-index: 100;
-    }
-
-    .nav-dot {
-      width: 12px;
-      height: 12px;
-      border: 2px solid var(--color-primary);
-      border-radius: 50%;
-      cursor: pointer;
-      background: transparent;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .nav-dot::after {
-      content: attr(data-label);
-      position: absolute;
-      right: 25px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--color-primary);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 4px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .nav-dot:hover::after {
-      opacity: 1;
-    }
-
-    .nav-dot.active {
-      background: var(--color-primary);
-      box-shadow: 0 0 15px var(--color-primary);
-    }
-
-    /* Full-Width Narrative Sections */
-    .narrative-section {
-      position: relative;
-      padding: 60px 0;
-      min-height: auto;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.1);
-    }
-
-    .narrative-glow {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      opacity: 0.15;
-      pointer-events: none;
-    }
-
-    .narrative-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .narrative-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .narrative-section.reverse .narrative-grid {
-      direction: rtl;
-    }
-
-    .narrative-section.reverse .narrative-text {
-      direction: ltr;
-    }
-
-    .narrative-image-wrap {
-      perspective: 1200px;
-    }
-
-    /* === VAULT CARDS — Horizontal Book Layout === */
-    .editorial-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .book-card-editorial {
-      display: flex;
-      flex-direction: row;
-      gap: 0;
-      border-radius: 14px;
-      overflow: hidden;
-      background: var(--color-surface);
-      border: 1px solid rgba(var(--color-primary-rgb), 0.12);
-      box-shadow:
-        0 2px 8px rgba(0,0,0,0.18),
-        0 12px 32px rgba(0,0,0,0.22);
-      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-      position: relative;
-    }
-
-    /* Colored accent line on top */
-    .book-card-editorial::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--color-primary), transparent);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .book-card-editorial:hover {
-      transform: translateY(-6px);
-      border-color: rgba(var(--color-primary-rgb), 0.35);
-      box-shadow:
-        0 8px 20px rgba(0,0,0,0.28),
-        0 24px 48px rgba(0,0,0,0.32),
-        0 0 0 1px rgba(var(--color-primary-rgb), 0.2);
-    }
-
-    .book-card-editorial:hover::before {
-      opacity: 1;
-    }
-
-    /* Thumbnail on left */
-    .book-frame {
-      flex-shrink: 0;
-      width: 120px;
-      height: 100%;
-      min-height: 200px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .book-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .book-card-editorial:hover .book-frame img {
-      transform: scale(1.06);
-    }
-
-    /* Text panel on right */
-    .book-card-body {
-      padding: 1.5rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1;
-    }
-
-    .editorial-meta {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--color-primary);
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .editorial-title {
-      font-size: 1.35rem;
-      font-weight: 800;
-      line-height: 1.25;
-      margin: 0 0 0.75rem;
-      color: var(--color-text);
-    }
-
-    .editorial-desc {
-      font-size: 0.88rem;
-      line-height: 1.65;
-      color: var(--color-text-muted);
-      margin: 0 0 1.25rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      flex-grow: 1;
-    }
-
-    .editorial-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-weight: 700;
-      font-size: 0.82rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--color-primary);
-      text-decoration: none;
-      transition: gap 0.3s ease, opacity 0.3s ease;
-    }
-
-    .editorial-link i {
-      font-size: 0.75rem;
-      transition: transform 0.3s ease;
-    }
-
-    .editorial-link:hover { gap: 0.9rem; opacity: 0.85; }
-    .editorial-link:hover i { transform: translateX(3px); }
-
-    /* Responsive */
-    @media (max-width: 991px) {
-      .editorial-container { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 600px) {
-      .book-frame { width: 90px; min-height: 160px; }
-      .book-card-body { padding: 1.1rem 1.25rem; }
-    }
-
-    .archive-section {
-      padding: 60px 0;
-      background: rgba(var(--color-primary-rgb), 0.02);
-    }
-
-    .section-header.mb-5 {
-      margin-bottom: 2.5rem !important;
-    }
-
-    .editorial-desc {
-      margin: 0.75rem 0 !important;
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/books.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- RTL Support Settings -->
+  <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 
 <body id="books-page-v2">
@@ -310,214 +28,247 @@
   <!-- Floating Navigator -->
   <div class="uni-nav">
     <div class="nav-dot active" data-label="Archive Intro" onclick="scrollToSection('hero')"></div>
-    <div class="nav-dot" data-label="Starfall Echoes" onclick="scrollToSection('book1')"></div>
-    <div class="nav-dot" data-label="Nebula's Wrath" onclick="scrollToSection('book2')"></div>
-    <div class="nav-dot" data-label="Void Whisperer" onclick="scrollToSection('book3')"></div>
+    <div class="nav-dot" data-label="Starfall Echoes" onclick="scrollToSection('series')"></div>
+    <div class="nav-dot" data-label="Scientific Lexicon" onclick="scrollToSection('lexicon')"></div>
     <div class="nav-dot" data-label="Standalone Archive" onclick="scrollToSection('archive')"></div>
   </div>
 
   <header class="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo"><i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE</a>
+      <a href="index.html" class="brand-logo">
+        <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
+      </a>
+
       <button class="mobile-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+
       <nav class="nav-menu">
+        <!-- Home Dropdown -->
         <div class="nav-item-dropdown">
-          <a class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <a class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
           <div class="dropdown-menu">
-            <a href="index.html" class="dropdown-item">Home 1</a>
-            <a href="index-2.html" class="dropdown-item">Home 2</a>
+            <a href="index.html" class="dropdown-item">Home 1 (Default)</a>
+            <a href="index-2.html" class="dropdown-item">Home 2 (Split)</a>
           </div>
         </div>
         <a href="books.html" class="nav-link active">Books</a>
-        <a href="the-world.html" class="nav-link">The World</a>
         <a href="blog.html" class="nav-link">Blog</a>
-        <a href="vault.html" class="nav-link text-accent">Vault</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- Dashboards Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle">Dashboards <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="dashboard.html" class="dropdown-item">User Dashboard</a>
+            <a href="admin-dashboard.html" class="dropdown-item">Admin Dashboard</a>
+          </div>
+        </div>
+
+        
+        <!-- Pages Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle">Pages <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="404.html" class="dropdown-item">404 Error</a>
+            <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+          </div>
+        </div>
         <div class="nav-actions">
-          <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
-          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Access</a>
+          <button class="dir-toggle" aria-label="Toggle RTL/LTR"
+            style="border-color: var(--color-border); color: var(--color-text); margin-right: 0.5rem; background: transparent; border-radius: 50%; width: 40px; height: 40px; border: 1px solid var(--color-border); display: inline-flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease;"><i
+              class="fa-solid fa-language"></i></button>
+          <button class="theme-toggle" aria-label="Toggle Dark Mode"
+            style="border-color: var(--color-border); color: var(--color-text);"><i
+              class="fa-solid fa-circle-half-stroke"></i></button>
+          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Login</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Parallax Cinematic Hero -->
-    <section class="parallax-hero" id="hero">
-      <div class="nebula-layer" id="nebula"></div>
-      <div class="hero-content-cinema" data-aos="zoom-out" data-aos-duration="1500">
-        <span class="text-accent" style="font-weight: 700; letter-spacing: 5px; text-transform: uppercase;">Aria Vance Collection</span>
-        <h1 style="font-size: clamp(3rem, 10vw, 6rem); margin: 1rem 0; line-height: 1;">Infinite Chronicles</h1>
-        <p class="text-muted" style="max-width: 700px; margin: 2rem auto; font-size: 1.25rem;">Navigate through solar systems of imagination, where every page is a portal to a new realm.</p>
-        <button class="btn btn-primary" style="padding: 1.2rem 3rem; border-radius: 50px;" onclick="scrollToSection('book1')">Enter the Archives</button>
+    <!-- Cinematic Hero -->
+    <section class="books-hero" id="hero">
+      <div class="container" data-aos="fade-up">
+        <span class="books-hero-label">The Aria Vance Collection</span>
+        <h1 class="books-hero-title">Infinite Chronicles</h1>
+        <p class="books-hero-subtitle">Navigate through solar systems of imagination, where every page is a portal to a
+          new realm.</p>
       </div>
     </section>
 
-    <!-- Book 1: Narrative Feature -->
-    <section class="narrative-section" id="book1">
-      <div class="narrative-glow" style="background: radial-gradient(circle at 30% 50%, rgba(var(--color-primary-rgb), 0.3), transparent);"></div>
-      <div class="container narrative-content">
-        <div class="narrative-grid">
-          <div class="narrative-image-wrap" data-aos="fade-right">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76?auto=format&fit=crop&w=800&q=80" alt="Starfall Echoes">
+    <!-- Main Series Showcase -->
+    <section class="series-section" id="series">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="series-meta">The Cosmic Chronicles Trilogy</span>
+          <h2 style="font-size: 3rem; color: var(--color-primary-dark);">Core Transmissions</h2>
+        </div>
+
+        <div class="series-grid">
+          <!-- Book 1 -->
+          <article class="series-card" data-aos="fade-up">
+            <div class="series-image">
+              <img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76?auto=format&fit=crop&w=800&q=80"
+                alt="Starfall Echoes">
             </div>
+            <div class="series-content">
+              <span class="series-meta">Chronicles | 01</span>
+              <h3 class="series-title">Starfall Echoes</h3>
+              <p class="series-desc">The collision of two planetary systems is imminent. Only a disgraced astromancer
+                can decipher the ancient stellar prophecy.</p>
+              <a href="book-details.html" class="series-link">Initialize Signal <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </article>
+
+          <!-- Book 2 -->
+          <article class="series-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="series-image">
+              <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80"
+                alt="Nebula's Wrath" style="filter: hue-rotate(320deg);">
+            </div>
+            <div class="series-content">
+              <span class="series-meta">Chronicles | 02</span>
+              <h3 class="series-title">Nebula's Wrath</h3>
+              <p class="series-desc">The Nebular Knights have risen from the colonies. Elara must choose between the
+                laws of physics and the chaos of the void.</p>
+              <a href="book-details.html" class="series-link" style="color: #f04f4f;">Lore Protocol <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </article>
+
+          <!-- Book 3 -->
+          <article class="series-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="series-image">
+              <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=800&q=80"
+                alt="Void Whisperer" style="filter: hue-rotate(150deg);">
+            </div>
+            <div class="series-content">
+              <span class="series-meta">Chronicles | 03</span>
+              <h3 class="series-title">Void Whisperer</h3>
+              <p class="series-desc">The silence of the void speaks. A final sacrifice will determine if the Star
+                Systems converge or vanish into eternal night.</p>
+              <a href="book-details.html" class="series-link" style="color: #4ff0a1;">Face the Void <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Scientific Lexicon -->
+    <section class="lexicon-section" id="lexicon">
+      <div class="container">
+        <div class="section-header mb-5" data-aos="fade-up">
+          <span class="series-meta">System Glossary</span>
+          <h2 style="font-size: 2.5rem; color: var(--color-primary-dark);">Scientific Lexicon</h2>
+        </div>
+        <div class="lexicon-grid">
+          <div class="lexicon-item" data-aos="fade-up">
+            <h4 class="lexicon-term">Aether-Drive</h4>
+            <p class="lexicon-def">A propulsion system utilizing sub-atomic vacuum energy for interstellar transit.</p>
           </div>
-          <div class="narrative-text" data-aos="fade-up">
-            <span class="editorial-meta">The Cosmic Chronicles | Book 1</span>
-            <h2 class="editorial-title" style="font-size: 3.5rem;">Starfall Echoes</h2>
-            <p class="editorial-desc" style="-webkit-line-clamp: initial; line-clamp: initial; margin: 1.5rem 0;">
-              The collision of two planetary systems is imminent. Only a disgraced astromancer and a rogue elementalist can decipher the ancient stellar prophecy before the galaxy burns.
-            </p>
-            <div class="format-chips" style="display: flex; gap: 1rem; margin-top: 2rem;">
-              <span class="format-chip">E-Book</span>
-              <span class="format-chip">Audiobook</span>
-              <span class="format-chip">Hardcover</span>
-            </div>
-            <div style="margin-top: 3rem;">
-              <a href="book-details.html" class="editorial-link" style="font-size: 1.1rem;">Read Full Transmission <i class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
+          <div class="lexicon-item" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="lexicon-term">Stellar Prophecy</h4>
+            <p class="lexicon-def">An ancient gravitational pattern predicted by Precursor mathematicians.</p>
+          </div>
+          <div class="lexicon-item" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="lexicon-term">Void-Shielding</h4>
+            <p class="lexicon-def">Protective thermal layers designed to withstand the absolute zero of deep space.</p>
+          </div>
+          <div class="lexicon-item" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="lexicon-term">Chronometer</h4>
+            <p class="lexicon-def">A high-precision device used to measure time dilation across event horizons.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Book 2: Narrative Feature (Reversed) -->
-    <section class="narrative-section reverse" id="book2">
-      <div class="narrative-glow" style="background: radial-gradient(circle at 70% 50%, rgba(240, 79, 79, 0.2), transparent);"></div>
-      <div class="container narrative-content">
-        <div class="narrative-grid">
-          <div class="narrative-image-wrap" data-aos="fade-left">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80" alt="Nebula's Wrath" style="filter: hue-rotate(320deg);">
-            </div>
-          </div>
-          <div class="narrative-text" data-aos="fade-up">
-            <span class="editorial-meta" style="color: #f04f4f;">The Cosmic Chronicles | Book 2</span>
-            <h2 class="editorial-title" style="font-size: 3.5rem;">Nebula's Wrath</h2>
-            <p class="editorial-desc" style="-webkit-line-clamp: initial; line-clamp: initial; margin: 1.5rem 0;">
-              The Nebular Knights have risen from the dark matter colonies. As the Aethelgard Academy falls, Elara must choose between the laws of physics and the chaos of the void.
-            </p>
-            <div class="format-chips" style="display: flex; gap: 1rem; margin-top: 2rem;">
-              <span class="format-chip">E-Book</span>
-              <span class="format-chip">Signed Copy</span>
-            </div>
-            <div style="margin-top: 3rem;">
-              <a href="book-details.html" class="editorial-link" style="color: #f04f4f; font-size: 1.1rem;">Join the Resistance <i class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Book 3: Narrative Feature -->
-    <section class="narrative-section" id="book3">
-      <div class="narrative-glow" style="background: radial-gradient(circle at 30% 50%, rgba(79, 240, 161, 0.2), transparent);"></div>
-      <div class="container narrative-content">
-        <div class="narrative-grid">
-          <div class="narrative-image-wrap" data-aos="fade-right">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=800&q=80" alt="Void Whisperer" style="filter: hue-rotate(150deg);">
-            </div>
-          </div>
-          <div class="narrative-text" data-aos="fade-up">
-            <span class="editorial-meta" style="color: #4ff0a1;">The Cosmic Chronicles | Book 3</span>
-            <h2 class="editorial-title" style="font-size: 3.5rem;">Void Whisperer</h2>
-            <p class="editorial-desc" style="-webkit-line-clamp: initial; line-clamp: initial; margin: 1.5rem 0;">
-              The silence of the void speaks. In the heart of the Great Dissolution, a final sacrifice will determine if the Star Systems converge or vanish into eternal night.
-            </p>
-            <div class="format-chips" style="display: flex; gap: 1rem; margin-top: 2rem;">
-              <span class="format-chip">E-Book</span>
-              <span class="format-chip">Audiobook</span>
-            </div>
-            <div style="margin-top: 3rem;">
-              <a href="book-details.html" class="editorial-link" style="color: #4ff0a1; font-size: 1.1rem;">Face the Void <i class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Archive Masonry Grid for Standalones -->
+    <!-- Standalone Vault -->
     <section class="archive-section" id="archive">
       <div class="container">
         <div class="section-header text-center mb-5" data-aos="fade-up">
-          <span class="text-accent" style="font-weight: 700; letter-spacing: 3px; text-transform: uppercase;">Lore & Side-Stories</span>
-          <h2 style="font-size: 3rem; margin-top: 0.5rem;">The Standalone Vault</h2>
+          <span class="series-meta">Expansion Files</span>
+          <h2 style="font-size: 3rem; color: var(--color-primary-dark);">The Standalone Vault</h2>
         </div>
 
-        <div class="editorial-container">
+        <div class="archive-grid">
           <!-- Solar Ascendant -->
-          <article class="book-card-editorial" data-aos="fade-up">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?auto=format&fit=crop&w=600&q=80" alt="Solar Ascendant">
+          <article class="archive-card" data-aos="fade-up">
+            <div class="archive-thumb">
+              <img src="https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?auto=format&fit=crop&w=600&q=80"
+                alt="Solar Ascendant">
             </div>
-            <div class="book-card-body">
-              <div>
-                <span class="editorial-meta">Bestseller | Prequel</span>
-                <h3 class="editorial-title">Solar Ascendant</h3>
-                <p class="editorial-desc">The epic standalone prequel to the entire Star System era, exploring the first flares of stellar consciousness.</p>
-              </div>
-              <a href="book-details.html" class="editorial-link">View File <i class="fa-solid fa-arrow-right-long"></i></a>
+            <div class="archive-body">
+              <span class="series-meta">Prequel</span>
+              <h3 class="archive-title">Solar Ascendant</h3>
+              <p class="archive-text">The epic standalone prequel, exploring the first flares of stellar consciousness.
+              </p>
+              <a href="book-details.html" class="series-link">View File <i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
           </article>
 
           <!-- Shadow of Ignis -->
-          <article class="book-card-editorial" data-aos="fade-up" data-aos-delay="100">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1518365050014-70fe7232897f?auto=format&fit=crop&w=600&q=80" alt="Shadow of Ignis">
+          <article class="archive-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="archive-thumb">
+              <img src="https://images.unsplash.com/photo-1518365050014-70fe7232897f?auto=format&fit=crop&w=600&q=80"
+                alt="Shadow of Ignis">
             </div>
-            <div class="book-card-body">
-              <div>
-                <span class="editorial-meta">Coming 2026</span>
-                <h3 class="editorial-title">Shadow of Ignis</h3>
-                <p class="editorial-desc">Volcanic intrigue and elemental warfare in the burning fields of the volcanic kingdom.</p>
-              </div>
-              <a href="book-details.html" class="editorial-link">Lore Access <i class="fa-solid fa-arrow-right-long"></i></a>
+            <div class="archive-body">
+              <span class="series-meta">Concept</span>
+              <h3 class="archive-title">Shadow of Ignis</h3>
+              <p class="archive-text">Volcanic intrigue and elemental warfare in the burning fields of the volcanic
+                kingdom.</p>
+              <a href="book-details.html" class="series-link">Lore Access <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
             </div>
           </article>
 
           <!-- The Nebulae Protocol -->
-          <article class="book-card-editorial" data-aos="fade-up" data-aos-delay="200">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80" alt="The Nebulae Protocol">
+          <article class="archive-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="archive-thumb">
+              <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80"
+                alt="The Nebulae Protocol">
             </div>
-            <div class="book-card-body">
-              <div>
-                <span class="editorial-meta">Lore Novella</span>
-                <h3 class="editorial-title">The Nebulae Protocol</h3>
-                <p class="editorial-desc">A digital-first dive into encryption protocols that protected the first star-engines.</p>
-              </div>
-              <a href="book-details.html" class="editorial-link">Initialize <i class="fa-solid fa-arrow-right-long"></i></a>
+            <div class="archive-body">
+              <span class="series-meta">Lore Novella</span>
+              <h3 class="archive-title">The Nebulae Protocol</h3>
+              <p class="archive-text">A digital-first dive into encryption protocols that protected the first
+                star-engines.</p>
+              <a href="book-details.html" class="series-link">Initialize <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
             </div>
           </article>
 
           <!-- Aether Artifact -->
-          <article class="book-card-editorial" data-aos="fade-up">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76?auto=format&fit=crop&w=600&q=80" alt="Aether Artifact" style="filter: hue-rotate(90deg);">
+          <article class="archive-card" data-aos="fade-up">
+            <div class="archive-thumb">
+              <img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76?auto=format&fit=crop&w=600&q=80"
+                alt="Aether Artifact" style="filter: hue-rotate(90deg);">
             </div>
-            <div class="book-card-body">
-              <div>
-                <span class="editorial-meta">Tech Archive</span>
-                <h3 class="editorial-title">Aether Artifact</h3>
-                <p class="editorial-desc">Discover the machines that make magic possible through raw scientific wonder.</p>
-              </div>
-              <a href="book-details.html" class="editorial-link">View Details <i class="fa-solid fa-arrow-right-long"></i></a>
+            <div class="archive-body">
+              <span class="series-meta">Tech Archive</span>
+              <h3 class="archive-title">Aether Artifact</h3>
+              <p class="archive-text">Discover the machines that make magic possible through raw scientific wonder.</p>
+              <a href="book-details.html" class="series-link">View Details <i
+                  class="fa-solid fa-arrow-right-long"></i></a>
             </div>
           </article>
 
           <!-- Chronopolis Alpha -->
-          <article class="book-card-editorial" data-aos="fade-up" data-aos-delay="100">
-            <div class="book-frame">
-              <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=600&q=80" alt="Chronopolis Alpha">
+          <article class="archive-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="archive-thumb">
+              <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=600&q=80"
+                alt="Chronopolis Alpha">
             </div>
-            <div class="book-card-body">
-              <div>
-                <span class="editorial-meta">Citizen Log</span>
-                <h3 class="editorial-title">Chronopolis Alpha</h3>
-                <p class="editorial-desc">A city where time flows as a currency and gravity is merely a suggestion.</p>
-              </div>
-              <a href="book-details.html" class="editorial-link">Enter City <i class="fa-solid fa-arrow-right-long"></i></a>
+            <div class="archive-body">
+              <span class="series-meta">Citizen Log</span>
+              <h3 class="archive-title">Chronopolis Alpha</h3>
+              <p class="archive-text">A city where time flows as a currency and gravity is merely a suggestion.</p>
+              <a href="book-details.html" class="series-link">Enter City <i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
           </article>
         </div>
@@ -538,25 +289,24 @@
           <h4>Explore</h4>
           <ul class="footer-links">
             <li><a href="books.html">The Series</a></li>
-            <li><a href="the-world.html">Lore Codex</a></li>
             <li><a href="blog.html">Transmissions</a></li>
-            <li><a href="events.html">Star-Gazing Events</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
           <h4>Citizen Portal</h4>
           <ul class="footer-links">
-            <li><a href="vault.html">The Vault</a></li>
             <li><a href="login.html">Access Account</a></li>
+            <li><a href="register.html">Join Citizenry</a></li>
             <li><a href="about.html">The Architect</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
-          <h4>Reach</h4>
+          <h4>Legal & Reach</h4>
           <ul class="footer-links">
             <li><a href="contact.html">Send Signal</a></li>
             <li><a href="#">Privacy Protocol</a></li>
             <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Press Kit</a></li>
           </ul>
         </div>
       </div>
@@ -566,6 +316,7 @@
           <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
     </div>
@@ -574,29 +325,22 @@
   <script src="../assets/js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       AOS.init({ duration: 1000, once: true, offset: 100 });
 
-      // Parallax Nebula Logic
-      window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const nebula = document.getElementById('nebula');
-        nebula.style.transform = `translateY(${scrolled * 0.3}px)`;
-        
-        // Update Nav Dots
-        updateNavDots();
-      });
-
+      // Update Nav Dots
+      window.addEventListener('scroll', updateNavDots);
       function updateNavDots() {
-        const sections = ['hero', 'book1', 'book2', 'book3', 'archive'];
+        const sections = ['hero', 'series', 'lexicon', 'archive'];
         const dots = document.querySelectorAll('.nav-dot');
-        
         sections.forEach((id, index) => {
           const section = document.getElementById(id);
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            dots.forEach(d => d.classList.remove('active'));
-            dots[index].classList.add('active');
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              dots.forEach(d => d.classList.remove('active'));
+              dots[index].classList.add('active');
+            }
           }
         });
       }
@@ -606,6 +350,8 @@
       document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     }
   </script>
+  <!-- RTL Support Script -->
+  <script src="../assets/js/rtl-ltr.js"></script>
 </body>
 
 </html>

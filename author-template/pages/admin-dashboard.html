@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard | Aria Vance</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,9 @@
   <link rel="stylesheet" href="../assets/css/dashboard.css">
   
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- RTL Support Settings -->
+  <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 
 <body id="admin-dashboard">
@@ -88,12 +91,15 @@
 
         <div class="dash-header-right">
           <span class="badge" style="background-color: var(--color-primary-dark); color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; margin-right: 1rem;">ADMIN PORTAL</span>
+          <button class="dash-action-btn dir-toggle" title="Toggle RTL/LTR">
+            <i class="fa-solid fa-language"></i>
+          </button>
           <button class="dash-action-btn theme-toggle" title="Toggle Theme">
             <i class="fa-solid fa-circle-half-stroke"></i>
           </button>
           <button class="dash-action-btn" title="System Alerts">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <span class="badge"></span>
+            <i class="fa-solid fa-bell"></i>
+            <span class="badge">5</span>
           </button>
           <div class="dash-user-profile">
             <div class="dash-avatar" style="background-color: var(--color-accent);">AV</div>
@@ -134,7 +140,7 @@
               <div class="stat-icon warning"><i class="fa-solid fa-unlock-keyhole"></i></div>
               <div class="stat-info">
                 <h3>856</h3>
-                <p>Vault Access Tokens</p>
+                <p>Lore Access Tokens</p>
               </div>
             </div>
             <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
@@ -169,7 +175,7 @@
                         <td>2 mins ago</td>
                       </tr>
                       <tr>
-                        <td>Vault Sync Completed</td>
+                        <td>Database Sync Completed</td>
                         <td>System Core</td>
                         <td>15 mins ago</td>
                       </tr>
@@ -414,10 +420,6 @@
 
       </div>
 
-      <!-- Footer -->
-      <footer style="padding: 1.5rem 2rem; border-top: 1px solid var(--dash-border); text-align: center;">
-        <p style="font-size: 0.8rem; color: var(--color-text-muted);">&copy; 2026 Aria Vance. Admin Portal v2.0.1 Stable.</p>
-      </footer>
     </main>
   </div>
 
@@ -430,6 +432,8 @@
       AOS.init({ duration: 800, once: true, offset: 50 });
     });
   </script>
+  <!-- RTL Support Script -->
+  <script src="../assets/js/rtl-ltr.js"></script>
 </body>
 
 </html>

@@ -1,49 +1,108 @@
-/* 
- * RTL Layout CSS - Science Fiction / Fantasy Author Template
- * Support for Right-To-Left Languages
- */
+/* rtl.css */
 
-[dir="rtl"] {
-  direction: rtl;
-  text-align: right;
+/* General RTL Body Overrides */
+html[dir="rtl"] {
+    text-align: right;
 }
 
-[dir="rtl"] .nav-actions {
-  /* reverse spacing */
+html[dir="rtl"] body {
+    direction: rtl;
 }
 
-[dir="rtl"] .site-header .brand-logo {
-  flex-direction: row-reverse;
+/* Navbar specific fixes */
+html[dir="rtl"] .brand-logo {
+    margin-right: 0;
+    margin-left: auto; /* Push it to the right if flex */
 }
 
-[dir="rtl"] .section-title::after {
-  left: auto;
-  right: 50%;
-  transform: translateX(50%);
+html[dir="rtl"] .nav-actions {
+    margin-left: 0;
+    margin-right: auto;
 }
 
-/* Modals */
-[dir="rtl"] .modal-close {
-  right: auto;
-  left: 1rem;
+html[dir="rtl"] .dropdown-menu {
+    left: auto;
+    right: 0;
+    text-align: right;
 }
 
-/* Utilities */
-[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
-[dir="rtl"] .mr-auto { margin-right: 0; margin-left: auto; }
-
-/* Dashboard adjustments for RTL */
-[dir="rtl"] .dashboard-sidebar {
-  border-right: none;
-  border-left: 1px solid var(--color-border);
+html[dir="rtl"] .fa-chevron-down {
+    margin-left: 0;
+    margin-right: 5px;
 }
 
-[dir="rtl"] .dashboard-nav a {
-  padding-left: 1rem;
-  padding-right: 1.5rem;
+html[dir="rtl"] .dropdown-item {
+    text-align: right;
 }
 
-[dir="rtl"] .dashboard-nav a::before {
-  left: auto;
-  right: 0;
+/* Margin utilities reversal if they are used heavily, but modern flex handles a lot. */
+/* We will flip explicit physical margins where necessary */
+html[dir="rtl"] .mr-1, html[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .mr-2, html[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .mr-3, html[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .mr-4, html[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .mr-5, html[dir="rtl"] .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+
+html[dir="rtl"] .ml-1, html[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ml-2, html[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ml-3, html[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ml-4, html[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ml-5, html[dir="rtl"] .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+
+html[dir="rtl"] .pr-1, html[dir="rtl"] .pe-1 { padding-left: 0.25rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pr-2, html[dir="rtl"] .pe-2 { padding-left: 0.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pr-3, html[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pr-4, html[dir="rtl"] .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pr-5, html[dir="rtl"] .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+
+html[dir="rtl"] .pl-1, html[dir="rtl"] .ps-1 { padding-right: 0.25rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .pl-2, html[dir="rtl"] .ps-2 { padding-right: 0.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .pl-3, html[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .pl-4, html[dir="rtl"] .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .pl-5, html[dir="rtl"] .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+
+/* Flip any absolutely positioned elements starting from left to start from right */
+html[dir="rtl"] .left-0 {
+    left: auto !important;
+    right: 0 !important;
+}
+
+html[dir="rtl"] .right-0 {
+    right: auto !important;
+    left: 0 !important;
+}
+
+/* Lists */
+html[dir="rtl"] ul, html[dir="rtl"] ol {
+    padding-right: 2rem;
+    padding-left: 0;
+}
+
+/* Floats if any */
+html[dir="rtl"] .float-left { float: right !important; }
+html[dir="rtl"] .float-right { float: left !important; }
+
+/* Text alignments */
+html[dir="rtl"] .text-left, html[dir="rtl"] .text-start { text-align: right !important; }
+html[dir="rtl"] .text-right, html[dir="rtl"] .text-end { text-align: left !important; }
+
+/* Swiper Fixes */
+html[dir="rtl"] .swiper-button-next {
+    right: auto;
+    left: 10px;
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .swiper-button-prev {
+    left: auto;
+    right: 10px;
+    transform: scaleX(-1);
+}
+
+/* Arrows in buttons / links */
+html[dir="rtl"] .fa-arrow-right, html[dir="rtl"] .fa-long-arrow-right {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .fa-arrow-left, html[dir="rtl"] .fa-long-arrow-left {
+    transform: scaleX(-1);
 }

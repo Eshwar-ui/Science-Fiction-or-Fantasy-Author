@@ -22,6 +22,7 @@
   --color-text: #1F2937;
   --color-text-muted: #6B7280;
   --color-border: #E5E7EB;
+  --card-border: #d4d4d4;
 
   /* Typography */
   --font-heading: 'Poppins', sans-serif;
@@ -44,8 +45,8 @@
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
-  --spacing-lg: 10rem;
-  --spacing-xl: 15rem;
+  --spacing-lg: 6rem;
+  --spacing-xl: 8rem;
 
   /* Border Radius */
   --border-radius-sm: 8px;
@@ -130,6 +131,10 @@ ol {
 
 .text-right {
   text-align: right;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .text-white {
@@ -221,8 +226,8 @@ ol {
 .page-header {
   position: relative;
   min-height: 45vh;
-  padding-top: 140px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -368,6 +373,7 @@ ol {
 .site-header.navbar-transparent-light:not(.scrolled) .brand-logo,
 .site-header.navbar-transparent-light:not(.scrolled) .nav-link:not(.dropdown-item),
 .site-header.navbar-transparent-light:not(.scrolled) .theme-toggle,
+.site-header.navbar-transparent-light:not(.scrolled) .dir-toggle,
 .site-header.navbar-transparent-light:not(.scrolled) .mobile-toggle {
   color: #ffffff !important;
 }
@@ -452,7 +458,7 @@ ol {
   left: 0;
   min-width: 200px;
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
   padding: 0.5rem;
@@ -504,8 +510,8 @@ ol {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 140px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 80px;
   background: var(--color-bg);
   transition: background var(--transition-slow);
 }
@@ -513,7 +519,7 @@ ol {
 .hero-banner.hero-center {
   text-align: center;
   justify-content: center;
-  padding-top: 160px;
+  padding-top: 110px;
 }
 
 .hero-banner.hero-center .container {
@@ -566,7 +572,7 @@ ol {
   padding: 1.25rem;
   border-radius: 20px;
   box-shadow: var(--shadow-xl);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--card-border);
   z-index: 10;
   backdrop-filter: blur(10px);
 }
@@ -707,7 +713,7 @@ ol {
   box-shadow: var(--shadow-sm);
   overflow: hidden;
   transition: all var(--transition-normal);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--card-border);
 }
 
 .card:hover {
@@ -736,7 +742,7 @@ ol {
   box-shadow: var(--shadow-lg) !important;
   transition: transform 0.05s linear, box-shadow 0.3s ease;
   /* Ultra-fast linear transform for instant feel */
-  border: 1px solid var(--color-border) !important;
+  border: 1px solid var(--card-border);
   padding: 0 !important;
   display: flex !important;
   flex-direction: column !important;
@@ -821,6 +827,18 @@ ol {
 }
 
 /* Specialized Book Card Styles */
+.testimonial-card {
+  padding: 3rem 2rem;
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Specialized Book Card Styles */
 .book-card {
   position: relative;
   background-color: var(--color-surface);
@@ -828,7 +846,7 @@ ol {
   box-shadow: var(--shadow-sm);
   overflow: hidden;
   transition: all var(--transition-normal);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -1211,6 +1229,7 @@ ol {
   /* Override white text for activated mobile menu on transparent dark backgrounds */
   .site-header.navbar-transparent-light:not(.scrolled) .nav-menu.active .nav-link:not(.dropdown-item),
   .site-header.navbar-transparent-light:not(.scrolled) .nav-menu.active .theme-toggle,
+  .site-header.navbar-transparent-light:not(.scrolled) .nav-menu.active .dir-toggle,
   .site-header.navbar-transparent-light:not(.scrolled) .nav-menu.active .brand-logo,
   .site-header.navbar-transparent-light:not(.scrolled) .nav-menu.active .btn-outline {
     color: var(--color-text) !important;
@@ -1379,9 +1398,9 @@ ol {
 .site-footer {
   position: relative;
   width: 100%;
-  padding: clamp(4rem, 8vw, 8rem) 0 4rem;
+  padding: clamp(2rem, 4vw, 4rem) 0 2rem;
   background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
+  border: 1px solid var(--card-border);
   overflow: hidden;
 }
 
@@ -1389,7 +1408,7 @@ ol {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: clamp(2rem, 4vw, 4rem);
-  margin-bottom: clamp(3rem, 6vw, 6rem);
+  margin-bottom: clamp(1.5rem, 3vw, 3rem);
 }
 
 .footer-brand .brand-logo {
@@ -1410,7 +1429,7 @@ ol {
   font-family: var(--font-heading);
   font-size: clamp(0.9rem, 1.3vw, 1rem);
   font-weight: 600;
-  margin-bottom: clamp(1.2rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
   color: var(--color-primary-dark);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -1422,7 +1441,7 @@ ol {
 }
 
 .footer-links li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.75rem;
 }
 
 .footer-links a {
@@ -1651,6 +1670,10 @@ ol {
   border-color: rgba(255, 255, 255, 0.3);
   color: white !important;
   border-radius: 50px;
+}
+
+.event-action .btn-outline:hover {
+  color: var(--color-primary) !important;
 }
 
 @media (max-width: 640px) {

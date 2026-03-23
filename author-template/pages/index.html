@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aria Vance | Science Fiction & Fantasy Author</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <meta name="description"
     content="Official website of Aria Vance, author of The Cosmic Chronicles. Explore books, the universe, and join the Vault.">
 
@@ -16,14 +17,15 @@
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- RTL Support Settings -->
+  <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 
 <body style="background-color: var(--color-bg); color: var(--color-text);">
 
-  <!-- Site Header -->
   <header class="site-header navbar-transparent-light">
     <div class="container navbar">
       <a href="index.html" class="brand-logo">
@@ -43,11 +45,8 @@
           </div>
         </div>
         <a href="books.html" class="nav-link">Books</a>
-        <a href="the-world.html" class="nav-link">The World</a>
         <a href="blog.html" class="nav-link">Blog</a>
-        <a href="events.html" class="nav-link">Events</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="vault.html" class="nav-link text-accent">Vault</a>
         <a href="contact.html" class="nav-link">Contact</a>
 
         <!-- Dashboards Dropdown -->
@@ -60,7 +59,19 @@
           </div>
         </div>
 
+        
+        <!-- Pages Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle">Pages <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="404.html" class="dropdown-item">404 Error</a>
+            <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+          </div>
+        </div>
         <div class="nav-actions">
+          <button class="dir-toggle" aria-label="Toggle RTL/LTR"
+            style="border-color: var(--color-border); color: var(--color-text); margin-right: 0.5rem; background: transparent; border-radius: 50%; width: 40px; height: 40px; border: 1px solid var(--color-border); display: inline-flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease;"><i
+              class="fa-solid fa-language"></i></button>
           <button class="theme-toggle" aria-label="Toggle Dark Mode"
             style="border-color: var(--color-border); color: var(--color-text);"><i
               class="fa-solid fa-circle-half-stroke"></i></button>
@@ -295,36 +306,11 @@
               FOCUS</span>
             <h2 style="font-size: 2.8rem; margin-top: 1.5rem; margin-bottom: 2rem; line-height: 1.2;">Venture into the
               Aethelgard System</h2>
-            <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.5rem;">
-              The starborn aren't merely survivors—they are the architects of the new era. Discover the complex web of
-              lineages, ancient technology, and the elemental magic that binds the characters of the Cosmic Chronicles
-              together.
+            <p class="text-muted" style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem;">
+              The starborn aren't merely survivors—they are the architects of a new era. Discover the ancient magic and 
+              political intrigue that binds the Aethelgard System together.
             </p>
-            <ul style="list-style: none; margin-bottom: 3.5rem;">
-              <li style="display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.5rem;">
-                <div
-                  style="width: 28px; height: 28px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem;">
-                  <i class="fa-solid fa-check"></i>
-                </div>
-                <span style="font-weight: 600; font-size: 1rem;">Deep Character Arcs</span>
-              </li>
-              <li style="display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.5rem;">
-                <div
-                  style="width: 28px; height: 28px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem;">
-                  <i class="fa-solid fa-check"></i>
-                </div>
-                <span style="font-weight: 600; font-size: 1rem;">Ancient Technology Lore</span>
-              </li>
-              <li style="display: flex; align-items: center; gap: 1.2rem;">
-                <div
-                  style="width: 28px; height: 28px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem;">
-                  <i class="fa-solid fa-check"></i>
-                </div>
-                <span style="font-weight: 600; font-size: 1rem;">Interstellar Politics</span>
-              </li>
-            </ul>
-            <a href="the-world.html" class="btn btn-primary" style="padding: 1.2rem 3.5rem; font-size: 1rem;">Explore
-              the Lore Map</a>
+            <a href="the-world.html" class="btn btn-primary" style="padding: 1.1rem 3rem; font-size: 1rem; border-radius: 50px;">Explore the Lore Map</a>
           </div>
         </div>
       </div>
@@ -390,17 +376,11 @@
     <!-- Universe Blog Section (New Section for "More Scrolls") -->
     <section class="section home_sec7">
       <div class="container">
-        <div class="grid-2 align-items-center" style="margin-bottom: 5rem; gap: 4rem;">
-          <div data-aos="fade-right">
-            <h2 style="font-size: 3rem; color: var(--color-primary-dark); line-height: 1.2;">Inside the <br><span
-                class="text-gradient">Architect's</span> Lab.</h2>
-            <p class="text-muted" style="font-size: 1.15rem; margin-top: 1.5rem;">Stay updated with universe reveals,
-              writing journals, and the latest from the Aethelgard System.</p>
-          </div>
-          <div style="text-align: right; " data-aos="fade-left" class="home_sec7_btn">
-            <a href="blog.html" class="btn btn-outline" style="padding: 1rem 2rem; border-radius: 50px;">Visit the Vault
-              Blog &rarr;</a>
-          </div>
+        <div class="section-header" data-aos="fade-up" style="margin-bottom: 4rem; text-align: left;">
+          <h2 style="font-size: 3rem; color: var(--color-primary-dark); line-height: 1.2;">Inside the <br><span
+              class="text-gradient">Architect's</span> Lab.</h2>
+          <p class="text-muted" style="font-size: 1.15rem; margin-top: 1.5rem;">Stay updated with universe reveals,
+            writing journals, and the latest from the Aethelgard System.</p>
         </div>
 
         <div class="grid-3" style="gap: 2rem; perspective: 1200px;">
@@ -442,55 +422,14 @@
             </div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- Upcoming Chronology (Events Section) -->
-    <section class="section bg-secondary text-white home_sec7" style="overflow: hidden;">
-      <!-- Background Glow -->
-      <div
-        style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; background: radial-gradient(circle at center, rgba(149, 79, 240, 0.15), transparent 70%); pointer-events: none;">
-      </div>
-
-      <div class="container" style="position: relative; z-index: 2;">
-        <div class="section-header" data-aos="fade-up" style="margin-bottom: 3rem;">
-          <span class="badge-soft"
-            style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);">Upcoming
-            Events</span>
-          <h2 style="font-size: 3.5rem; margin-top: 1.5rem; color: white;">Live Transmissions</h2>
-        </div>
-
-        <div class="events-list">
-          <div class="event-item" data-aos="fade-up">
-            <div class="event-date">
-              <span class="day">24</span>
-              <span class="month">MARCH</span>
-            </div>
-            <div class="event-details">
-              <h4>Virtual Signing Ceremony</h4>
-              <p>Live on Discord & Twitch – Exclusive sneak peeks of Solar Ascendant.</p>
-            </div>
-            <div class="event-action">
-              <a href="events.html" class="btn btn-outline">Join Stream</a>
-            </div>
-          </div>
-
-          <div class="event-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="event-date">
-              <span class="day">12</span>
-              <span class="month">APRIL</span>
-            </div>
-            <div class="event-details">
-              <h4>SF Galaxy Con Panel</h4>
-              <p>Aria Vance discusses 'The Intersection of Science and Myth' with the SF Guild.</p>
-            </div>
-            <div class="event-action">
-              <a href="events.html" class="btn btn-outline">Get Tickets</a>
-            </div>
-          </div>
+        <div style="text-align: center; margin-top: 4rem;" data-aos="fade-up">
+          <a href="blog.html" class="btn btn-outline"
+            style="padding: 0.7rem 1.8rem; border-radius: 50px; font-size: 0.9rem;">Visit the Vault Blog &rarr;</a>
         </div>
       </div>
     </section>
+
 
     <!-- Professional Testimonials -->
     <section class="section bg-light-gray home_sec8"
@@ -576,45 +515,10 @@
               solstice 2026.</p>
           </div>
 
-          <div class="faq-item">
-            <h4>How can I access the Vault?</h4>
-            <p>Citizens must register for a transmission channel (account) to access exclusive short stories and lore
-              drafts in the Vault.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Newsletter Modern Banner -->
-    <section class="section home_sec10" style="padding: 10rem 0;">
-      <div class="container">
-        <div class="home_sec10_card"
-          style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); padding: 5rem; border-radius: 40px; position: relative; overflow: hidden; color: white; text-align: center;"
-          data-aos="zoom-in">
-          <!-- Abstract Background shapes -->
-          <div
-            style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%;">
-          </div>
-          <div
-            style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(255,255,255,0.05); border-radius: 50%;">
-          </div>
-
-          <div style="position: relative; z-index: 2; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: white; font-size: 3rem; margin-bottom: 1rem;">Enter the Vault.</h2>
-            <p style="opacity: 0.9; font-size: 1.2rem; margin-bottom: 3rem;">Join 50,000+ citizens of the Aethelgard
-              System and receive exclusive short stories and lore drops.</p>
-            <form action="#"
-              style="display: flex; gap: 0.5rem; background: rgba(255,255,255,0.15); padding: 0.5rem; border-radius: 60px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2);">
-              <input type="email" class="newsletter-input" placeholder="Your transmission channel (email)" required
-                style="flex: 1; border: none; background: transparent; color: white; padding-left: 2rem; outline: none; font-family: var(--font-body);" />
-              <button type="submit" class="btn"
-                style="background: white; color: var(--color-primary-dark); font-weight: 700; border-radius: 50px; padding: 1rem 2.5rem;">Join
-                Citizenry</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
 
   </main>
 
@@ -625,22 +529,18 @@
           <a href="index.html" class="brand-logo">
             <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
           </a>
-          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic
-            meets scientific wonder.</p>
+          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic meets scientific wonder.</p>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
           <h4>Explore</h4>
           <ul class="footer-links">
             <li><a href="books.html">The Series</a></li>
-            <li><a href="the-world.html">Lore Codex</a></li>
             <li><a href="blog.html">Transmissions</a></li>
-            <li><a href="events.html">Star-Gazing Events</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
           <h4>Citizen Portal</h4>
           <ul class="footer-links">
-            <li><a href="vault.html">The Vault</a></li>
             <li><a href="login.html">Access Account</a></li>
             <li><a href="register.html">Join Citizenry</a></li>
             <li><a href="about.html">The Architect</a></li>
@@ -811,6 +711,8 @@
       color: var(--color-text);
     }
   </style>
+  <!-- RTL Support Script -->
+  <script src="../assets/js/rtl-ltr.js"></script>
 </body>
 
 </html>

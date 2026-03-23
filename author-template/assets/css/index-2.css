@@ -128,7 +128,7 @@
 
 /* Structural Dossier - Balanced Alignment */
 .dossier-section {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background: var(--architect-section-bg);
     transition: background-color 0.3s ease;
 }
@@ -160,7 +160,7 @@
     padding: 2.5rem;
     position: relative;
     z-index: 2;
-    border: 1px solid var(--architect-line);
+    border: 1px solid #d4d4d4;
     box-shadow: var(--shadow-lg);
     border-radius: 4px;
 }
@@ -230,7 +230,7 @@
     backdrop-filter: blur(10px);
     padding: 2.5rem;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #d4d4d4;
 }
 
 .chrono-title {
@@ -248,7 +248,7 @@
 
 /* Lore Mosaic */
 .lore-mosaic-section {
-    padding: 10rem 0;
+    padding: 6rem 0;
     background: var(--architect-section-bg);
 }
 
@@ -278,6 +278,7 @@
     border-radius: 8px;
     background: #111;
     min-height: 100%;
+    border: 1px solid #d4d4d4;
 }
 
 .mosaic-item.large {
@@ -331,7 +332,7 @@
 
 /* Architectural Stats - Compact */
 .architect-stats {
-    padding: 6rem 0;
+    padding: 5rem 0;
     background: var(--color-secondary);
     color: #ffffff;
 }
@@ -340,6 +341,7 @@
     border-left: 2px solid var(--color-accent);
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
+    border: 1px solid #d4d4d4;
 }
 
 .stat-box-modern h4 {
@@ -400,7 +402,7 @@
 
 /* Sub-Space CTA */
 .sub-space-portal {
-    padding: 10rem 0;
+    padding: 6rem 0;
     text-align: center;
     background: radial-gradient(circle at 50% 100%, var(--color-bg-light) 0%, var(--architect-section-bg) 100%);
 }
@@ -412,6 +414,7 @@
     background: var(--architect-surface);
     box-shadow: var(--shadow-xl);
     border-radius: 8px;
+    border: 1px solid #d4d4d4;
 }
 
 .portal-title {
@@ -445,7 +448,7 @@
 
 .btn-portal-guide {
     background: transparent;
-    border: 1px solid var(--architect-line);
+    border: 1px solid #d4d4d4;
     color: var(--architect-title);
     transition: all 0.3s ease;
 }
@@ -473,11 +476,237 @@
     background: var(--architect-surface) !important;
     border-top: 1px solid var(--architect-line) !important;
     color: var(--color-text) !important;
-    padding: 6rem 0 3rem;
+    padding: 4rem 0 2rem;
 }
 
 [data-theme="light"] .site-header.scrolled .theme-toggle {
     color: var(--color-text) !important;
+}
+
+/* Section: The Atelier (Concept Art) */
+.atelier-section {
+    padding: 6rem 0;
+    background: var(--architect-section-bg);
+    border-top: 1px solid var(--architect-line);
+}
+
+.atelier-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+}
+
+.blueprint-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border: 1px solid #d4d4d4;
+    transition: var(--transition-cinematic);
+}
+
+.blueprint-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    filter: grayscale(1) contrast(1.2);
+    transition: var(--transition-cinematic);
+}
+
+.blueprint-card:hover img {
+    opacity: 0.9;
+    filter: grayscale(0.2) contrast(1);
+    transform: scale(1.05);
+}
+
+.blueprint-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.blueprint-tag {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.blueprint-title {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+}
+
+.blueprint-details {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: right;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+/* Section: Chronological Fragments (Timeline) */
+.timeline-section {
+    padding: 6rem 0;
+    background: var(--architect-surface);
+}
+
+/* Fix Timeline Alignment and Spacing */
+.timeline-horizontal {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 0;
+    margin-top: 6rem;
+}
+
+.timeline-horizontal::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--architect-line);
+}
+
+.timeline-event {
+    flex: 1;
+    position: relative;
+    padding-top: 3.5rem;
+    padding-right: 3rem;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--color-accent);
+    z-index: 5;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-weight: 850;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1.25rem;
+    display: block;
+    position: relative;
+}
+
+.timeline-title {
+    font-size: 1.4rem;
+    color: var(--architect-title);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.timeline-desc {
+    font-size: 0.95rem;
+    color: var(--architect-text-dim);
+    line-height: 1.7;
+}
+
+/* Section: Citizen Transmissions (Testimonials) */
+.transmissions-section {
+    padding: 6rem 0;
+    background: var(--architect-section-bg);
+    border-top: 1px solid var(--architect-line);
+}
+
+.transmission-item {
+    margin-bottom: 3rem;
+    max-width: 800px;
+    padding: 2rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 12px;
+}
+
+.transmission-label {
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.transmission-text {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--architect-title);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.transmission-author {
+    font-size: 0.9rem;
+    color: var(--architect-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Section: System Protocols (Technical Stats) */
+.protocol-section {
+    padding: 6rem 0;
+    background: var(--architect-surface);
+}
+
+.protocol-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--architect-line);
+    border: 1px solid #d4d4d4;
+}
+
+.protocol-card {
+    background: var(--architect-surface);
+    padding: 3rem 2rem;
+    transition: background 0.3s ease;
+}
+
+.protocol-card:hover {
+    background: rgba(149, 79, 240, 0.03);
+}
+
+.protocol-key {
+    font-size: 0.65rem;
+    color: var(--architect-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.protocol-value {
+    font-size: 1.5rem;
+    color: var(--architect-title);
+    font-weight: 700;
 }
 
 /* Mobile Responsiveness */
@@ -502,6 +731,11 @@
         grid-row: span 1;
     }
 
+    .atelier-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .portal-outline {
         padding: 3rem 1.5rem;
     }
@@ -509,6 +743,10 @@
     .hero-title-v2 {
         font-size: 25px;
         margin-top: 25px;
+    }
+
+    .protocol-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -520,7 +758,11 @@
     .dossier-section,
     .lore-mosaic-section,
     .philosophy-section,
-    .sub-space-portal {
+    .sub-space-portal,
+    .atelier-section,
+    .timeline-section,
+    .transmissions-section,
+    .protocol-section {
         padding: 4rem 0;
     }
 
@@ -536,6 +778,51 @@
 
     .portal-outline {
         padding: 2rem 1rem;
+    }
+
+    .timeline-horizontal {
+        flex-direction: column;
+        gap: 3.5rem;
+        padding-top: 0;
+        margin-top: 2rem;
+    }
+
+    .timeline-horizontal::before {
+        left: 0;
+        width: 1px;
+        height: 100%;
+        top: 0;
+    }
+
+    .timeline-event {
+        padding-left: 2.5rem;
+        padding-right: 0;
+        padding-top: 0; /* Reset for vertical layout */
+    }
+
+    .timeline-event::before {
+        left: -5px;
+        top: 0;
+    }
+
+    .transmission-text {
+        font-size: 1.1rem; /* Further reduced from 1.4rem */
+    }
+
+    .transmission-item {
+        margin-bottom: 3rem; /* Reduced from 5rem */
+    }
+
+    .blueprint-overlay {
+        padding: 1.5rem; /* Reduced from 3rem for better alignment */
+    }
+
+    .blueprint-title {
+        font-size: 1.3rem; /* Reduced from 1.8rem */
+    }
+
+    .protocol-grid {
+        grid-template-columns: 1fr;
     }
 }
 

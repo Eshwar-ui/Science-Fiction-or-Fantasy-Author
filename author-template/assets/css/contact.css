@@ -209,4 +209,73 @@
     .galactic-presence {
         margin-top: 5rem !important; 
     }
+
+    /* Wrap and scale the representation section */
+    .contact-page-section > .container > .grid-2 > div:nth-child(2) {
+        width: 100% !important;
+        max-width: 320px !important; 
+        margin: 0 auto !important; 
+    }
+
+    /* Target inner cards to force vertical stacking */
+    .contact-page-section > .container > .grid-2 > div:nth-child(2) > div > div[style*="background: var(--color-surface)"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 1.25rem 1rem !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+
+    /* Ensure text container wraps emails successfully */
+    .contact-page-section > .container > .grid-2 > div:nth-child(2) > div > div[style*="background: var(--color-surface)"] > div:last-child {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+    
+    .rep-email {
+        word-break: break-all !important; /* Force email address to break to next line */
+        overflow-wrap: break-word !important; 
+        white-space: normal !important; /* Explicitly allow wrapping */
+        display: block !important; /* Changed from flex/inline-flex to block to allow strict width bounds */
+        line-height: 1.5 !important;
+    }
+    
+    .rep-email i {
+        margin-right: 5px; /* Add spacing back since gap on flex was removed */
+    }
+}
+/* ===== Google Map Section ===== */
+.map-section {
+  padding: 4rem 0 4rem;
+}
+
+.map-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-container {
+  margin-top: 2.5rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--color-border);
+  height: 450px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 280px;
+    border-radius: 12px;
+  }
+
+  .map-section .section-title {
+    font-size: 1.8rem;
+  }
 }

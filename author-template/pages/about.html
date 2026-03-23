@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aria Vance | The Architect</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;850&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -21,6 +22,8 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/about.css">
+  <!-- RTL Support Settings -->
+  <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 
 <body class="light-mode">
@@ -36,31 +39,44 @@
       <nav class="nav-menu">
         <!-- Home Dropdown -->
         <div class="nav-item-dropdown">
-          <a class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <a class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
           <div class="dropdown-menu">
             <a href="index.html" class="dropdown-item">Home 1 (Default)</a>
             <a href="index-2.html" class="dropdown-item">Home 2 (Split)</a>
           </div>
         </div>
         <a href="books.html" class="nav-link">Books</a>
-        <a href="the-world.html" class="nav-link">The World</a>
         <a href="blog.html" class="nav-link">Blog</a>
-        <a href="events.html" class="nav-link">Events</a>
         <a href="about.html" class="nav-link active">About</a>
-        <a href="vault.html" class="nav-link text-accent">Vault</a>
         <a href="contact.html" class="nav-link">Contact</a>
 
         <!-- Dashboards Dropdown -->
         <div class="nav-item-dropdown">
-          <a class="nav-link dropdown-toggle">Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <a class="nav-link dropdown-toggle">Dashboards <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
           <div class="dropdown-menu">
             <a href="dashboard.html" class="dropdown-item">User Dashboard</a>
             <a href="admin-dashboard.html" class="dropdown-item">Admin Dashboard</a>
           </div>
         </div>
 
+        
+        <!-- Pages Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle">Pages <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="404.html" class="dropdown-item">404 Error</a>
+            <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+          </div>
+        </div>
         <div class="nav-actions">
-          <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border-color: var(--color-border); color: var(--color-text);"><i class="fa-solid fa-circle-half-stroke"></i></button>
+          <button class="dir-toggle" aria-label="Toggle RTL/LTR"
+            style="border-color: var(--color-border); color: var(--color-text); margin-right: 0.5rem; background: transparent; border-radius: 50%; width: 40px; height: 40px; border: 1px solid var(--color-border); display: inline-flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease;"><i
+              class="fa-solid fa-language"></i></button>
+          <button class="theme-toggle" aria-label="Toggle Dark Mode"
+            style="border-color: var(--color-border); color: var(--color-text);"><i
+              class="fa-solid fa-circle-half-stroke"></i></button>
           <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Login</a>
         </div>
       </nav>
@@ -136,7 +152,7 @@
       <div class="container text-center" style="position: relative; z-index: 2; max-width: 800px;">
         <i class="fa-solid fa-feather-pointed" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 2rem;"
           data-aos="fade-up"></i>
-        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); color: white; margin-bottom: 2rem;" data-aos="fade-up"
+        <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); color: white; margin-bottom: 2rem;" data-aos="fade-up"
           data-aos-delay="100">"The universe wasn't empty.<br> It was waiting for a story."</h2>
         <p style="font-size: 1.2rem; opacity: 0.8; font-weight: 300; line-height: 1.8;" data-aos="fade-up"
           data-aos-delay="200">In 2018, while deployed at the Mauna Kea Observatories, Aria penned the first 50,000
@@ -305,14 +321,11 @@
     <section class="section"
       style="padding: 8rem 0; background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); color: white; text-align: center;">
       <div class="container" data-aos="fade-up">
-        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); color: white; margin-bottom: 1.5rem;">Join the Citizenry</h2>
-        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 3rem; line-height: 1.6;">Gain secure
-          access to the Vault. Receive encrypted transmissions regarding early lore drops, map reveals, and chapter
-          leaks.</p>
+        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); color: white; margin-bottom: 1.5rem;">The Journey Continues</h2>
+        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 3rem; line-height: 1.6;">Stay updated with the latest transmissions and book releases. Follow the Architect across the cosmos.</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="register.html" class="btn"
-            style="background: white; color: var(--color-primary-dark); padding: 1rem 2.5rem; font-weight: 700; border-radius: 50px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">Become
-            A Citizen</a>
+          <a href="contact.html" class="btn"
+            style="background: white; color: var(--color-primary-dark); padding: 1rem 2.5rem; font-weight: 700; border-radius: 50px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">Send Signal</a>
           <a href="books.html" class="btn"
             style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); padding: 1rem 2.5rem; font-weight: 700; border-radius: 50px; transition: all 0.3s ease;"
             onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='white'"
@@ -324,7 +337,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -332,22 +344,18 @@
           <a href="index.html" class="brand-logo">
             <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
           </a>
-          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic
-            meets scientific wonder.</p>
+          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic meets scientific wonder.</p>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
           <h4>Explore</h4>
           <ul class="footer-links">
             <li><a href="books.html">The Series</a></li>
-            <li><a href="the-world.html">Lore Codex</a></li>
             <li><a href="blog.html">Transmissions</a></li>
-            <li><a href="events.html">Star-Gazing Events</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
           <h4>Citizen Portal</h4>
           <ul class="footer-links">
-            <li><a href="vault.html">The Vault</a></li>
             <li><a href="login.html">Access Account</a></li>
             <li><a href="register.html">Join Citizenry</a></li>
             <li><a href="about.html">The Architect</a></li>
@@ -383,6 +391,8 @@
       AOS.init({ duration: 800, once: true, offset: 100 });
     });
   </script>
+  <!-- RTL Support Script -->
+  <script src="../assets/js/rtl-ltr.js"></script>
 </body>
 
 </html>

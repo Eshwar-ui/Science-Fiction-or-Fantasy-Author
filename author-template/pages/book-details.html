@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Starfall Echoes | Aria Vance</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <meta name="description" content="Read Starfall Echoes, Book 1 of The Cosmic Chronicles by Aria Vance.">
   
   <!-- AOS Animation CSS -->
@@ -15,7 +16,7 @@
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/dashboard.css">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     :root {
@@ -202,30 +203,62 @@
       .book-stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
+  <!-- RTL Support Settings -->
+  <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 <body id="book-details-page">
 
   <!-- Site Header (Consistent with main site) -->
   <header class="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo"><i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE</a>
+      <a href="index.html" class="brand-logo">
+        <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
+      </a>
+
       <button class="mobile-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+
       <nav class="nav-menu">
+        <!-- Home Dropdown -->
         <div class="nav-item-dropdown">
-          <a class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <a class="nav-link dropdown-toggle">Home <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
           <div class="dropdown-menu">
-            <a href="index.html" class="dropdown-item">Home 1</a>
-            <a href="index-2.html" class="dropdown-item">Home 2</a>
+            <a href="index.html" class="dropdown-item">Home 1 (Default)</a>
+            <a href="index-2.html" class="dropdown-item">Home 2 (Split)</a>
           </div>
         </div>
         <a href="books.html" class="nav-link active">Books</a>
-        <a href="the-world.html" class="nav-link">The World</a>
         <a href="blog.html" class="nav-link">Blog</a>
-        <a href="vault.html" class="nav-link text-accent">Vault</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- Dashboards Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle">Dashboards <i class="fa-solid fa-chevron-down"
+              style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="dashboard.html" class="dropdown-item">User Dashboard</a>
+            <a href="admin-dashboard.html" class="dropdown-item">Admin Dashboard</a>
+          </div>
+        </div>
+
         
+        <!-- Pages Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle">Pages <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="404.html" class="dropdown-item">404 Error</a>
+            <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+          </div>
+        </div>
         <div class="nav-actions">
-          <button class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
-          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Access</a>
+          <button class="dir-toggle" aria-label="Toggle RTL/LTR"
+            style="border-color: var(--color-border); color: var(--color-text); margin-right: 0.5rem; background: transparent; border-radius: 50%; width: 40px; height: 40px; border: 1px solid var(--color-border); display: inline-flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease;"><i
+              class="fa-solid fa-language"></i></button>
+          <button class="theme-toggle" aria-label="Toggle Dark Mode"
+            style="border-color: var(--color-border); color: var(--color-text);"><i
+              class="fa-solid fa-circle-half-stroke"></i></button>
+          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Login</a>
         </div>
       </nav>
     </div>
@@ -441,25 +474,24 @@
           <h4>Explore</h4>
           <ul class="footer-links">
             <li><a href="books.html">The Series</a></li>
-            <li><a href="the-world.html">Lore Codex</a></li>
             <li><a href="blog.html">Transmissions</a></li>
-            <li><a href="events.html">Star-Gazing Events</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
           <h4>Citizen Portal</h4>
           <ul class="footer-links">
-            <li><a href="vault.html">The Vault</a></li>
             <li><a href="login.html">Access Account</a></li>
+            <li><a href="register.html">Join Citizenry</a></li>
             <li><a href="about.html">The Architect</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
-          <h4>Reach</h4>
+          <h4>Legal & Reach</h4>
           <ul class="footer-links">
             <li><a href="contact.html">Send Signal</a></li>
             <li><a href="#">Privacy Protocol</a></li>
             <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Press Kit</a></li>
           </ul>
         </div>
       </div>
@@ -469,6 +501,7 @@
           <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
     </div>
@@ -503,5 +536,7 @@
       });
     });
   </script>
+  <!-- RTL Support Script -->
+  <script src="../assets/js/rtl-ltr.js"></script>
 </body>
 </html>

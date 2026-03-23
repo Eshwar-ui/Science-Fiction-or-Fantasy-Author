@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aria Vance | The Architect Redefining Worlds</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +19,10 @@
   <link rel="stylesheet" href="../assets/css/index-2.css">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- RTL Support Settings -->
+  <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
 
 <body id="architect-page">
@@ -34,22 +37,21 @@
       <button class="mobile-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
 
       <nav class="nav-menu">
+        <!-- Home Dropdown -->
         <div class="nav-item-dropdown">
           <a class="nav-link dropdown-toggle active">Home <i class="fa-solid fa-chevron-down"
               style="font-size: 0.7em;"></i></a>
           <div class="dropdown-menu">
             <a href="index.html" class="dropdown-item">Home 1 (Default)</a>
-            <a href="index-2.html" class="dropdown-item active">Home 2 (Architect)</a>
+            <a href="index-2.html" class="dropdown-item active">Home 2 (Split)</a>
           </div>
         </div>
         <a href="books.html" class="nav-link">Books</a>
-        <a href="the-world.html" class="nav-link">The World</a>
         <a href="blog.html" class="nav-link">Blog</a>
-        <a href="events.html" class="nav-link">Events</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="vault.html" class="nav-link text-accent">Vault</a>
         <a href="contact.html" class="nav-link">Contact</a>
 
+        <!-- Dashboards Dropdown -->
         <div class="nav-item-dropdown">
           <a class="nav-link dropdown-toggle">Dashboards <i class="fa-solid fa-chevron-down"
               style="font-size: 0.7em;"></i></a>
@@ -59,10 +61,23 @@
           </div>
         </div>
 
+        
+        <!-- Pages Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-link dropdown-toggle">Pages <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="404.html" class="dropdown-item">404 Error</a>
+            <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+          </div>
+        </div>
         <div class="nav-actions">
-          <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border-color: rgba(255,255,255,0.2);"><i
+          <button class="dir-toggle" aria-label="Toggle RTL/LTR"
+            style="border-color: var(--color-border); color: var(--color-text); margin-right: 0.5rem; background: transparent; border-radius: 50%; width: 40px; height: 40px; border: 1px solid var(--color-border); display: inline-flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease;"><i
+              class="fa-solid fa-language"></i></button>
+          <button class="theme-toggle" aria-label="Toggle Dark Mode"
+            style="border-color: var(--color-border); color: var(--color-text);"><i
               class="fa-solid fa-circle-half-stroke"></i></button>
-          <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; border-radius: 4px;">Access</a>
+          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Login</a>
         </div>
       </nav>
     </div>
@@ -178,6 +193,139 @@
               <h4 class="mosaic-item-title">The Great Divide</h4>
             </div>
           </div>
+          <div class="mosaic-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=800&q=80"
+              alt="Boreas Tundra">
+            <div class="mosaic-overlay">
+              <h4 class="mosaic-item-title">Boreas Tundra</h4>
+              <p class="mosaic-item-text">The Whispering Tundra. Ancient winds carry echoes of a civilization that
+                mastered the cold.</p>
+            </div>
+          </div>
+          <div class="mosaic-item" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=800&q=80"
+              alt="Astraea Gardens">
+            <div class="mosaic-overlay">
+              <h4 class="mosaic-item-title">Astraea Gardens</h4>
+              <p class="mosaic-item-text">Floating Sanctuary. A network of botanical domes suspended above the clouds of
+                a gas giant.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: The Atelier (Concept Art) -->
+    <section class="section atelier-section">
+      <div class="container">
+        <div class="section-header mb-5" data-aos="fade-up">
+          <h2 class="mosaic-main-title">The Atelier</h2>
+          <p class="mosaic-main-subtitle">Architectural blueprints from the Drafting Table.</p>
+        </div>
+        <div class="atelier-grid">
+          <div class="blueprint-card" data-aos="fade-right">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
+              alt="Engine Blueprint">
+            <div class="blueprint-overlay">
+              <span class="blueprint-tag">Module_024</span>
+              <h4 class="blueprint-title">Starfall Engine Core</h4>
+            </div>
+            <div class="blueprint-details">
+              X: 45.92<br>Y: 12.04<br>Z: ALPHA
+            </div>
+          </div>
+          <div class="blueprint-card" data-aos="fade-left" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+              alt="Orbital Station">
+            <div class="blueprint-overlay">
+              <span class="blueprint-tag">Station_009</span>
+              <h4 class="blueprint-title">Ignis Orbital Relay</h4>
+            </div>
+            <div class="blueprint-details">
+              ORBIT: GEO-SYNC<br>STATUS: ACTIVE
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Chronological Fragments (Timeline) -->
+    <section class="section timeline-section">
+      <div class="container">
+        <div class="section-header mb-5" data-aos="fade-up">
+          <h2 class="mosaic-main-title">Chronological Fragments</h2>
+          <p class="mosaic-main-subtitle">Stabilizing the narrative timeline.</p>
+        </div>
+        <div class="timeline-horizontal" data-aos="fade-up">
+          <div class="timeline-event">
+            <span class="timeline-date">3240 P.E.</span>
+            <h4 class="timeline-title">The Precursor Era</h4>
+            <p class="timeline-desc">Initial construction of the Star-Gates begins, linking the first three planetary
+              systems.</p>
+          </div>
+          <div class="timeline-event">
+            <span class="timeline-date">120 A.D.</span>
+            <h4 class="timeline-title">The Great Divide</h4>
+            <p class="timeline-desc">A cataclysmic energy spike fractures the interstellar bridge, isolating Aethelgard.
+            </p>
+          </div>
+          <div class="timeline-event">
+            <span class="timeline-date">CURRENT</span>
+            <h4 class="timeline-title">The Galactic Dawn</h4>
+            <p class="timeline-desc">Aria Vance’s chronometers detect the first echoes of a returning gate signal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Citizen Transmissions (Testimonials) -->
+    <section class="section transmissions-section">
+      <div class="container">
+        <div class="section-header mb-5" data-aos="fade-up">
+          <h2 class="mosaic-main-title">Citizen Transmissions</h2>
+          <p class="mosaic-main-subtitle">Intercepted feedback from the Star-Gate network.</p>
+        </div>
+        <div class="transmissions-list">
+          <div class="transmission-item" data-aos="fade-up">
+            <span class="transmission-label">Signal_Alpha_9</span>
+            <p class="transmission-text">"The structural realism of the Aethelgard System is staggering. It’s not just a
+              story; it’s a simulation of a possible future."</p>
+            <span class="transmission-author">— ELARA VOSS, CHIEF ASTROMETRICIST</span>
+          </div>
+          <div class="transmission-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="transmission-label">Signal_Beta_2</span>
+            <p class="transmission-text">"Vance has bridged the gap between hard science and mythic wonder. The
+              Chronological Fragments section is a masterpiece of world-building."</p>
+            <span class="transmission-author">— KAIRO SANE, LORE ARCHIVIST</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: System Protocols (Technical Stats) -->
+    <section class="section protocol-section">
+      <div class="container">
+        <div class="section-header mb-5" data-aos="fade-up">
+          <h2 class="mosaic-main-title">System Protocols</h2>
+          <p class="mosaic-main-subtitle">Validated environmental parameters of the Echo Sectors.</p>
+        </div>
+        <div class="protocol-grid" data-aos="zoom-in">
+          <div class="protocol-card">
+            <span class="protocol-key">GRAVITY</span>
+            <div class="protocol-value">0.92G</div>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-key">ATMOSPHERE</span>
+            <div class="protocol-value">NITRO-OXIDE</div>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-key">POPULATION</span>
+            <div class="protocol-value">12.4B</div>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-key">STATUS</span>
+            <div class="protocol-value">STABLE</div>
+          </div>
         </div>
       </div>
     </section>
@@ -197,60 +345,51 @@
       </div>
     </section>
 
-    <!-- Section 7: Sub-Space CTA -->
-    <section class="sub-space-portal">
-      <div class="container" data-aos="fade-up">
-        <div class="portal-outline">
-          <h2 class="portal-title">Access the Vault</h2>
-          <p class="portal-text">Join the citizenry to receive encrypted transmissions and early world blueprints.</p>
-          <div class="portal-actions">
-            <a href="register.html" class="btn btn-accent">Enroll</a>
-            <a href="vault.html" class="btn btn-portal-guide">Protocol Guide</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Section 8: Global Footer (Synchronized) -->
-  <footer class="site-footer architect-footer">
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand" data-aos="fade-up">
           <a href="index.html" class="brand-logo">
             <i class="fa-solid fa-star-of-david text-accent"></i> ARIA VANCE
           </a>
-          <p>Constructing narrative galaxies with scientific precision. Join the odyssey across the mapped Star Systems.
-          </p>
+          <p>Architecting galaxies through words. Join the epic journey across the Star Systems where ancient magic meets scientific wonder.</p>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
-          <h4>Structural Links</h4>
+          <h4>Explore</h4>
           <ul class="footer-links">
             <li><a href="books.html">The Series</a></li>
-            <li><a href="the-world.html">Lore Codex</a></li>
-            <li><a href="about.html">The Architect</a></li>
-            <li><a href="contact.html">Communicate</a></li>
+            <li><a href="blog.html">Transmissions</a></li>
           </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
-          <h4>Citizen Access</h4>
+          <h4>Citizen Portal</h4>
           <ul class="footer-links">
-            <li><a href="vault.html">The Vault</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html">Access Account</a></li>
+            <li><a href="register.html">Join Citizenry</a></li>
+            <li><a href="about.html">The Architect</a></li>
           </ul>
         </div>
-        <div class="footer-socials" data-aos="fade-up" data-aos-delay="300">
-          <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fa-brands fa-discord"></i></a>
-          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+          <h4>Legal & Reach</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send Signal</a></li>
+            <li><a href="#">Privacy Protocol</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="opacity: 0.5; font-size: 0.8rem; color: #000;">&copy; 2026 Aria Vance. All Rights Reserved.
-          Structural Integrity
-          Guaranteed.</p>
+        <p class="text-muted">&copy; 2026 Aria Vance. All Rights Reserved. Crafted for the Cosmos.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
       </div>
     </div>
   </footer>
@@ -262,6 +401,8 @@
       AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-out-cubic' });
     });
   </script>
+  <!-- RTL Support Script -->
+  <script src="../assets/js/rtl-ltr.js"></script>
 </body>
 
 </html>
