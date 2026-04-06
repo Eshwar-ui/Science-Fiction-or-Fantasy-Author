@@ -1,36 +1,78 @@
-# Author Template Documentation
+# Aria Vance Author Template Documentation
 
-Welcome to the documentation for the Science Fiction / Fantasy Author HTML Template.
+Welcome to the official documentation for the **Aria Vance Author Template**. Use the guides below to set up, customize, and maintain your high-end cinematic website.
 
-## 1. Installation
-This is a static HTML template. No Node.js, NPM, or build step is required. Simply load the `index.html` file into your local browser to preview the site. You can host this directly on platforms like GitHub Pages, Vercel, Netlify, or standard Apache/Nginx web servers.
+---
 
-## 2. Design System Customization
-### Colors & Typography
-All global styles are controlled by CSS Variables located at the top of `assets/css/style.css`.
-```css
-:root {
-  --color-primary: #2d1b4e;
-  --color-accent: #d4af37;
-  --font-heading: 'Cinzel', serif;
-  --font-body: 'Inter', sans-serif;
-}
-```
-Modify these hex codes to instantly update the entire theme. 
+## 📚 Guides & Resources
+- 🚀 **[Installation Guide](./installation.md)**: Get started in minutes.
+- 🎨 **[Customization Guide](./customization.md)**: Adjust branding, colors, and typography.
+- 🏗️ **[Page Structure](./structure.md)**: Explore the layout and SEO architecture.
+- 📜 **[Changelog](./changelog.md)**: Track recent updates and performance fixes.
+- 🏆 **[Credits](./credits.md)**: Attributions for fonts, icons, and libraries.
+- 🆘 **[Support](./support.md)**: Contact us for help and view the FAQ.
 
-### Dark Mode
-Dark mode is active by default. The `assets/js/main.js` script checks for the `data-theme="dark"` attribute on the `<html>` tag. You can switch default colors by editing `assets/css/dark-mode.css`.
+---
 
-## 3. The Members Vault & Dashboard System
-The template includes a `dashboard.html` and `vault.html` page to simulate a "Superfan" experience.
-- The Dashboard uses a lightweight JS tab system found in `assets/js/dashboard.js`. 
-- The Vault utilizes CSS overlay classes (`.locked` vs `.unlocked`) to hide/show premium content.
+## 🔍 Core Highlights
 
-*Note: As this is an HTML template, these are front-end placeholders. To make this functional, you must connect a backend like Firebase, Supabase, or a headless CMS (like Memberstack or Ghost).*
+## 1. Cinematic UI & Design System
 
-## 4. Next Steps & Upgrades (Developer Guide)
-The template is primed for the following integrations:
-1. **Interactive Maps:** Add Leaflet.js to `the-world.html` replacing the placeholder image to allow users to pan/zoom across the fictional map.
-2. **Contact Form:** The form in `contact.html` is pointing to a Formspree placeholder URL. Create a Formspree account and replace the `action=""` URL.
-3. **Newsletter:** The `index.html` and `coming-soon.html` forms are designed to be easily hooked into Mailchimp embedded forms.
-4. **GSAP Animations:** To take this template to the next level, include the GSAP library and add scroll-triggered fade-ins to elements with the `.section-title` or `.card` classes.
+### A. Color Palette
+- **Primary (Night Navy)**: `#0B1D3A` - The deep space aesthetic.
+- **Accent (Champagne Gold)**: `#D4AF37` - Premium branding.
+- **Gradients**: Mixes of Purple (`#954FF0`) and Dark Blue for a "Nebula" feel.
+
+### B. Typography
+- **Core Font**: **Poppins** (Local Hosting).
+- **Weights**: 300 (Light), 400 (Regular), 500 (Medium), 600 (Semi-Bold), 700 (Bold).
+- **Setup**: All fonts are served locally from `assets/fonts/` for maximum performance and GDPR compliance.
+
+### C. Glassmorphism
+- Used in navbars, cards, and auth monoliths.
+- `backdrop-filter: blur(20px)` paired with soft borders (`border: 1px solid rgba(255,255,255,0.05)`).
+
+---
+
+## 2. Asset Strategy (WebP & Premium Generation)
+
+### A. Image Optimization
+- All images are converted to **WebP** for reduced payload and faster LCP.
+- Organization:
+  - `assets/images/hero/`: Cinematic background banners.
+  - `assets/images/ui/`: Brand assets like favicons and logos.
+  - `assets/images/content/`: Context-specific imagery (book covers, screenshots).
+
+### B. AI-Enhanced Visuals
+- Premium hero assets and book covers were generated using state-of-the-art cinematic prompts to ensure a high-end author experience.
+
+---
+
+## 3. SEO & Connectivity
+
+### A. Meta-Data
+- Descriptive Title Tags tailored for science fiction and fantasy keywords.
+- Open Graph (OG) and Twitter Card tags for high-engagement social sharing.
+- Canonical links and semantic HTML consistency.
+
+### B. Structured Data (JSON-LD)
+- Includes `Person` (Author) and `Book` (where applicable) schema to improve Google Search rich snippets.
+
+### C. Performance Configuration
+- `robots.txt` and `sitemap.xml` are predefined for crawler efficiency.
+- Lazy loading (`loading="lazy"`) applied to non-critical below-the-fold images.
+
+---
+
+## 4. Maintenance Guide
+
+### Replacing Images
+1. Generate or source a high-quality capture.
+2. Convert it to **WebP** (recommended size: 1920x1080 for heroes, 800x1200 for books).
+3. Place in the respective `assets/images/` subfolder.
+4. Update the path in the relevant `.html` file.
+
+### Adding New Fonts
+1. Use `google-webfonts-helper` to download `.woff2` files.
+2. Add `@font-face` rules to `assets/css/style.css`.
+3. Update the `font-family` variables in `:root`.
